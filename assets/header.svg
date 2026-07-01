@@ -995,7 +995,7 @@
 <circle cx="54" cy="39" r="6.5" fill="#ff5f56"/>
 <circle cx="76" cy="39" r="6.5" fill="#ffbd2e"/>
 <circle cx="98" cy="39" r="6.5" fill="#27c93f"/>
-<text x="122" y="43" class="title">Aaron@github: ~</text>
+<text x="122" y="43" class="title">aarochu@github: ~</text>
 <line x1="44" y1="66" x2="1156" y2="66" stroke="#2aff2a" stroke-opacity="0.12"/>
 
 <g filter="url(#softGlow)">
