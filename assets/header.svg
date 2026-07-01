@@ -1,0 +1,1019 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-label="Aaron Chu — hacker terminal header">
+<defs>
+  <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#010301"/>
+    <stop offset="45%" stop-color="#040a04"/>
+    <stop offset="100%" stop-color="#081208"/>
+  </linearGradient>
+  <linearGradient id="termGlass" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#0e1f0e" stop-opacity="0.9"/>
+    <stop offset="100%" stop-color="#061206" stop-opacity="0.94"/>
+  </linearGradient>
+  <linearGradient id="scanlines" x1="0" y1="0" x2="0" y2="3" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+    <stop offset="45%" stop-color="#000000" stop-opacity="0.18"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+  </linearGradient>
+  <pattern id="scanPat" patternUnits="userSpaceOnUse" width="3" height="3">
+    <rect width="3" height="3" fill="url(#scanlines)"/>
+  </pattern>
+  <radialGradient id="crtVignette" cx="50%" cy="50%" r="65%">
+    <stop offset="55%" stop-color="#000000" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0.55"/>
+  </radialGradient>
+  <filter id="neonGlow" x="-60%" y="-60%" width="220%" height="220%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="blur"/>
+    <feColorMatrix in="blur" type="matrix"
+      values="0 0 0 0 0.15  0 0 0 0 1  0 0 0 0 0.35  0 0 0 1 0" result="glow"/>
+    <feMerge>
+      <feMergeNode in="glow"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+  <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+    <feGaussianBlur stdDeviation="0.8" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <clipPath id="termClip">
+    <rect x="28" y="20" width="1144" height="360" rx="16"/>
+  </clipPath>
+  <style><![CDATA[
+    text { font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'SF Mono', Consolas, monospace; }
+    .matrix {
+      fill: #00ff41;
+      font-size: 12px;
+      animation: matrixFall 9s linear infinite;
+    }
+    @keyframes matrixFall {
+      0% { transform: translateY(-220px); opacity: 0; }
+      6% { opacity: 0.4; }
+      90% { opacity: 0.15; }
+      100% { transform: translateY(400px); opacity: 0; }
+    }
+    .cmd { fill: #39ff14; font-size: 15px; font-weight: 700; filter: url(#neonGlow); }
+    .out { fill: #c8ffc8; font-size: 14px; opacity: 0; animation: fadeIn 0.12s forwards; }
+    .git { fill: #8dffb8; font-size: 13px; opacity: 0; animation: fadeIn 0.18s forwards; }
+    .sudo { fill: #fff06a; font-size: 14px; font-weight: 700; opacity: 0; animation: fadeIn 0.2s forwards; filter: url(#neonGlow); }
+    .type { opacity: 0; animation: charIn 0.04s forwards; }
+    .title { fill: #6dff6d; font-size: 12px; letter-spacing: 0.04em; }
+    .cursor {
+      fill: #39ff14;
+      font-size: 15px;
+      opacity: 0;
+      animation: cursorShow 0.01s 10.78s forwards, blink 1.05s 10.83s steps(1) infinite;
+      filter: url(#neonGlow);
+    }
+    @keyframes charIn { to { opacity: 1; } }
+    @keyframes fadeIn { to { opacity: 1; } }
+    @keyframes blink { 0%,49%{opacity:1} 50%,100%{opacity:0} }
+    @keyframes cursorShow { to { opacity: 1; } }
+    @keyframes pulseGlow {
+      0%,100% { stroke-opacity: 0.45; }
+      50% { stroke-opacity: 1; }
+    }
+    .term-border {
+      fill: none;
+      stroke: #2aff2a;
+      stroke-width: 1.5;
+      animation: pulseGlow 2.8s ease-in-out infinite;
+      filter: url(#neonGlow);
+    }
+  ]]></style>
+</defs>
+
+<rect width="1200" height="400" fill="url(#bgGrad)"/>
+
+<g clip-path="url(#termClip)">
+    <text x="24" y="10" class="matrix" style="animation-delay:-6.39s;animation-duration:5.6s;opacity:0.16">ス</text>
+    <text x="24" y="25" class="matrix" style="animation-delay:-6.39s;animation-duration:5.6s;opacity:0.11">キ</text>
+    <text x="24" y="40" class="matrix" style="animation-delay:-6.39s;animation-duration:5.6s;opacity:0.11">ン</text>
+    <text x="24" y="55" class="matrix" style="animation-delay:-6.39s;animation-duration:5.6s;opacity:0.10">オ</text>
+    <text x="24" y="70" class="matrix" style="animation-delay:-6.39s;animation-duration:5.6s;opacity:0.10">レ</text>
+    <text x="24" y="85" class="matrix" style="animation-delay:-6.39s;animation-duration:5.6s;opacity:0.09">ン</text>
+    <text x="24" y="100" class="matrix" style="animation-delay:-6.39s;animation-duration:5.6s;opacity:0.09">ム</text>
+    <text x="24" y="115" class="matrix" style="animation-delay:-6.39s;animation-duration:5.6s;opacity:0.08">エ</text>
+    <text x="24" y="130" class="matrix" style="animation-delay:-6.39s;animation-duration:5.6s;opacity:0.08">ヤ</text>
+    <text x="24" y="145" class="matrix" style="animation-delay:-6.39s;animation-duration:5.6s;opacity:0.07">ハ</text>
+    <text x="24" y="160" class="matrix" style="animation-delay:-6.39s;animation-duration:5.6s;opacity:0.06">ア</text>
+    <text x="24" y="175" class="matrix" style="animation-delay:-6.39s;animation-duration:5.6s;opacity:0.06">1</text>
+    <text x="24" y="190" class="matrix" style="animation-delay:-6.39s;animation-duration:5.6s;opacity:0.05">エ</text>
+    <text x="24" y="205" class="matrix" style="animation-delay:-6.39s;animation-duration:5.6s;opacity:0.05">シ</text>
+    <text x="24" y="220" class="matrix" style="animation-delay:-6.39s;animation-duration:5.6s;opacity:0.04">ス</text>
+    <text x="24" y="235" class="matrix" style="animation-delay:-6.39s;animation-duration:5.6s;opacity:0.04">マ</text>
+    <text x="24" y="250" class="matrix" style="animation-delay:-6.39s;animation-duration:5.6s;opacity:0.03">ユ</text>
+    <text x="24" y="265" class="matrix" style="animation-delay:-6.39s;animation-duration:5.6s;opacity:0.02">1</text>
+    <text x="24" y="280" class="matrix" style="animation-delay:-6.39s;animation-duration:5.6s;opacity:0.02">メ</text>
+    <text x="24" y="295" class="matrix" style="animation-delay:-6.39s;animation-duration:5.6s;opacity:0.02">サ</text>
+    <text x="49" y="10" class="matrix" style="animation-delay:-7.16s;animation-duration:9.4s;opacity:0.19">ヒ</text>
+    <text x="49" y="25" class="matrix" style="animation-delay:-7.16s;animation-duration:9.4s;opacity:0.14">ヤ</text>
+    <text x="49" y="40" class="matrix" style="animation-delay:-7.16s;animation-duration:9.4s;opacity:0.13">タ</text>
+    <text x="49" y="55" class="matrix" style="animation-delay:-7.16s;animation-duration:9.4s;opacity:0.12">0</text>
+    <text x="49" y="70" class="matrix" style="animation-delay:-7.16s;animation-duration:9.4s;opacity:0.12">ケ</text>
+    <text x="49" y="85" class="matrix" style="animation-delay:-7.16s;animation-duration:9.4s;opacity:0.11">ロ</text>
+    <text x="49" y="100" class="matrix" style="animation-delay:-7.16s;animation-duration:9.4s;opacity:0.10">ハ</text>
+    <text x="49" y="115" class="matrix" style="animation-delay:-7.16s;animation-duration:9.4s;opacity:0.10">ト</text>
+    <text x="49" y="130" class="matrix" style="animation-delay:-7.16s;animation-duration:9.4s;opacity:0.09">タ</text>
+    <text x="49" y="145" class="matrix" style="animation-delay:-7.16s;animation-duration:9.4s;opacity:0.08">ク</text>
+    <text x="49" y="160" class="matrix" style="animation-delay:-7.16s;animation-duration:9.4s;opacity:0.08">シ</text>
+    <text x="49" y="175" class="matrix" style="animation-delay:-7.16s;animation-duration:9.4s;opacity:0.07">ト</text>
+    <text x="49" y="190" class="matrix" style="animation-delay:-7.16s;animation-duration:9.4s;opacity:0.06">オ</text>
+    <text x="49" y="205" class="matrix" style="animation-delay:-7.16s;animation-duration:9.4s;opacity:0.06">エ</text>
+    <text x="49" y="220" class="matrix" style="animation-delay:-7.16s;animation-duration:9.4s;opacity:0.05">ヌ</text>
+    <text x="49" y="235" class="matrix" style="animation-delay:-7.16s;animation-duration:9.4s;opacity:0.04">オ</text>
+    <text x="49" y="250" class="matrix" style="animation-delay:-7.16s;animation-duration:9.4s;opacity:0.04">ナ</text>
+    <text x="49" y="265" class="matrix" style="animation-delay:-7.16s;animation-duration:9.4s;opacity:0.03">ナ</text>
+    <text x="49" y="280" class="matrix" style="animation-delay:-7.16s;animation-duration:9.4s;opacity:0.02">ユ</text>
+    <text x="49" y="295" class="matrix" style="animation-delay:-7.16s;animation-duration:9.4s;opacity:0.02">ソ</text>
+    <text x="75" y="10" class="matrix" style="animation-delay:-8.07s;animation-duration:9.5s;opacity:0.22">ヌ</text>
+    <text x="75" y="25" class="matrix" style="animation-delay:-8.07s;animation-duration:9.5s;opacity:0.16">エ</text>
+    <text x="75" y="40" class="matrix" style="animation-delay:-8.07s;animation-duration:9.5s;opacity:0.15">メ</text>
+    <text x="75" y="55" class="matrix" style="animation-delay:-8.07s;animation-duration:9.5s;opacity:0.14">チ</text>
+    <text x="75" y="70" class="matrix" style="animation-delay:-8.07s;animation-duration:9.5s;opacity:0.13">ラ</text>
+    <text x="75" y="85" class="matrix" style="animation-delay:-8.07s;animation-duration:9.5s;opacity:0.13">ヨ</text>
+    <text x="75" y="100" class="matrix" style="animation-delay:-8.07s;animation-duration:9.5s;opacity:0.12">ニ</text>
+    <text x="75" y="115" class="matrix" style="animation-delay:-8.07s;animation-duration:9.5s;opacity:0.11">モ</text>
+    <text x="75" y="130" class="matrix" style="animation-delay:-8.07s;animation-duration:9.5s;opacity:0.10">サ</text>
+    <text x="75" y="145" class="matrix" style="animation-delay:-8.07s;animation-duration:9.5s;opacity:0.09">ワ</text>
+    <text x="75" y="160" class="matrix" style="animation-delay:-8.07s;animation-duration:9.5s;opacity:0.09">ウ</text>
+    <text x="75" y="175" class="matrix" style="animation-delay:-8.07s;animation-duration:9.5s;opacity:0.08">ア</text>
+    <text x="75" y="190" class="matrix" style="animation-delay:-8.07s;animation-duration:9.5s;opacity:0.07">ル</text>
+    <text x="75" y="205" class="matrix" style="animation-delay:-8.07s;animation-duration:9.5s;opacity:0.06">ス</text>
+    <text x="75" y="220" class="matrix" style="animation-delay:-8.07s;animation-duration:9.5s;opacity:0.06">チ</text>
+    <text x="75" y="235" class="matrix" style="animation-delay:-8.07s;animation-duration:9.5s;opacity:0.05">エ</text>
+    <text x="75" y="250" class="matrix" style="animation-delay:-8.07s;animation-duration:9.5s;opacity:0.04">ス</text>
+    <text x="75" y="265" class="matrix" style="animation-delay:-8.07s;animation-duration:9.5s;opacity:0.03">オ</text>
+    <text x="75" y="280" class="matrix" style="animation-delay:-8.07s;animation-duration:9.5s;opacity:0.03">ヌ</text>
+    <text x="75" y="295" class="matrix" style="animation-delay:-8.07s;animation-duration:9.5s;opacity:0.03">タ</text>
+    <text x="100" y="10" class="matrix" style="animation-delay:-4.53s;animation-duration:10.1s;opacity:0.14">ナ</text>
+    <text x="100" y="25" class="matrix" style="animation-delay:-4.53s;animation-duration:10.1s;opacity:0.10">シ</text>
+    <text x="100" y="40" class="matrix" style="animation-delay:-4.53s;animation-duration:10.1s;opacity:0.09">ル</text>
+    <text x="100" y="55" class="matrix" style="animation-delay:-4.53s;animation-duration:10.1s;opacity:0.09">タ</text>
+    <text x="100" y="70" class="matrix" style="animation-delay:-4.53s;animation-duration:10.1s;opacity:0.08">ロ</text>
+    <text x="100" y="85" class="matrix" style="animation-delay:-4.53s;animation-duration:10.1s;opacity:0.08">レ</text>
+    <text x="100" y="100" class="matrix" style="animation-delay:-4.53s;animation-duration:10.1s;opacity:0.07">リ</text>
+    <text x="100" y="115" class="matrix" style="animation-delay:-4.53s;animation-duration:10.1s;opacity:0.07">ウ</text>
+    <text x="100" y="130" class="matrix" style="animation-delay:-4.53s;animation-duration:10.1s;opacity:0.06">ユ</text>
+    <text x="100" y="145" class="matrix" style="animation-delay:-4.53s;animation-duration:10.1s;opacity:0.06">ラ</text>
+    <text x="100" y="160" class="matrix" style="animation-delay:-4.53s;animation-duration:10.1s;opacity:0.05">ケ</text>
+    <text x="100" y="175" class="matrix" style="animation-delay:-4.53s;animation-duration:10.1s;opacity:0.05">ム</text>
+    <text x="100" y="190" class="matrix" style="animation-delay:-4.53s;animation-duration:10.1s;opacity:0.04">ヲ</text>
+    <text x="100" y="205" class="matrix" style="animation-delay:-4.53s;animation-duration:10.1s;opacity:0.04">セ</text>
+    <text x="100" y="220" class="matrix" style="animation-delay:-4.53s;animation-duration:10.1s;opacity:0.04">ケ</text>
+    <text x="100" y="235" class="matrix" style="animation-delay:-4.53s;animation-duration:10.1s;opacity:0.03">フ</text>
+    <text x="100" y="250" class="matrix" style="animation-delay:-4.53s;animation-duration:10.1s;opacity:0.03">ヌ</text>
+    <text x="100" y="265" class="matrix" style="animation-delay:-4.53s;animation-duration:10.1s;opacity:0.02">タ</text>
+    <text x="100" y="280" class="matrix" style="animation-delay:-4.53s;animation-duration:10.1s;opacity:0.02">ラ</text>
+    <text x="100" y="295" class="matrix" style="animation-delay:-4.53s;animation-duration:10.1s;opacity:0.02">ロ</text>
+    <text x="126" y="10" class="matrix" style="animation-delay:-5.57s;animation-duration:9.3s;opacity:0.29">イ</text>
+    <text x="126" y="25" class="matrix" style="animation-delay:-5.57s;animation-duration:9.3s;opacity:0.20">ス</text>
+    <text x="126" y="40" class="matrix" style="animation-delay:-5.57s;animation-duration:9.3s;opacity:0.19">ア</text>
+    <text x="126" y="55" class="matrix" style="animation-delay:-5.57s;animation-duration:9.3s;opacity:0.18">テ</text>
+    <text x="126" y="70" class="matrix" style="animation-delay:-5.57s;animation-duration:9.3s;opacity:0.17">ネ</text>
+    <text x="126" y="85" class="matrix" style="animation-delay:-5.57s;animation-duration:9.3s;opacity:0.16">タ</text>
+    <text x="126" y="100" class="matrix" style="animation-delay:-5.57s;animation-duration:9.3s;opacity:0.15">ウ</text>
+    <text x="126" y="115" class="matrix" style="animation-delay:-5.57s;animation-duration:9.3s;opacity:0.14">シ</text>
+    <text x="126" y="130" class="matrix" style="animation-delay:-5.57s;animation-duration:9.3s;opacity:0.13">モ</text>
+    <text x="126" y="145" class="matrix" style="animation-delay:-5.57s;animation-duration:9.3s;opacity:0.12">ワ</text>
+    <text x="126" y="160" class="matrix" style="animation-delay:-5.57s;animation-duration:9.3s;opacity:0.11">テ</text>
+    <text x="126" y="175" class="matrix" style="animation-delay:-5.57s;animation-duration:9.3s;opacity:0.10">シ</text>
+    <text x="126" y="190" class="matrix" style="animation-delay:-5.57s;animation-duration:9.3s;opacity:0.09">リ</text>
+    <text x="126" y="205" class="matrix" style="animation-delay:-5.57s;animation-duration:9.3s;opacity:0.08">ホ</text>
+    <text x="126" y="220" class="matrix" style="animation-delay:-5.57s;animation-duration:9.3s;opacity:0.07">ネ</text>
+    <text x="126" y="235" class="matrix" style="animation-delay:-5.57s;animation-duration:9.3s;opacity:0.06">リ</text>
+    <text x="126" y="250" class="matrix" style="animation-delay:-5.57s;animation-duration:9.3s;opacity:0.05">フ</text>
+    <text x="126" y="265" class="matrix" style="animation-delay:-5.57s;animation-duration:9.3s;opacity:0.04">ク</text>
+    <text x="126" y="280" class="matrix" style="animation-delay:-5.57s;animation-duration:9.3s;opacity:0.03">ソ</text>
+    <text x="126" y="295" class="matrix" style="animation-delay:-5.57s;animation-duration:9.3s;opacity:0.03">キ</text>
+    <text x="152" y="10" class="matrix" style="animation-delay:-2.47s;animation-duration:8.6s;opacity:0.16">ヤ</text>
+    <text x="152" y="25" class="matrix" style="animation-delay:-2.47s;animation-duration:8.6s;opacity:0.11">ハ</text>
+    <text x="152" y="40" class="matrix" style="animation-delay:-2.47s;animation-duration:8.6s;opacity:0.11">ヤ</text>
+    <text x="152" y="55" class="matrix" style="animation-delay:-2.47s;animation-duration:8.6s;opacity:0.10">ネ</text>
+    <text x="152" y="70" class="matrix" style="animation-delay:-2.47s;animation-duration:8.6s;opacity:0.10">ニ</text>
+    <text x="152" y="85" class="matrix" style="animation-delay:-2.47s;animation-duration:8.6s;opacity:0.09">ス</text>
+    <text x="152" y="100" class="matrix" style="animation-delay:-2.47s;animation-duration:8.6s;opacity:0.09">キ</text>
+    <text x="152" y="115" class="matrix" style="animation-delay:-2.47s;animation-duration:8.6s;opacity:0.08">マ</text>
+    <text x="152" y="130" class="matrix" style="animation-delay:-2.47s;animation-duration:8.6s;opacity:0.07">ホ</text>
+    <text x="152" y="145" class="matrix" style="animation-delay:-2.47s;animation-duration:8.6s;opacity:0.07">エ</text>
+    <text x="152" y="160" class="matrix" style="animation-delay:-2.47s;animation-duration:8.6s;opacity:0.06">イ</text>
+    <text x="152" y="175" class="matrix" style="animation-delay:-2.47s;animation-duration:8.6s;opacity:0.06">カ</text>
+    <text x="152" y="190" class="matrix" style="animation-delay:-2.47s;animation-duration:8.6s;opacity:0.05">ク</text>
+    <text x="152" y="205" class="matrix" style="animation-delay:-2.47s;animation-duration:8.6s;opacity:0.05">ラ</text>
+    <text x="152" y="220" class="matrix" style="animation-delay:-2.47s;animation-duration:8.6s;opacity:0.04">ケ</text>
+    <text x="152" y="235" class="matrix" style="animation-delay:-2.47s;animation-duration:8.6s;opacity:0.04">レ</text>
+    <text x="152" y="250" class="matrix" style="animation-delay:-2.47s;animation-duration:8.6s;opacity:0.03">ハ</text>
+    <text x="152" y="265" class="matrix" style="animation-delay:-2.47s;animation-duration:8.6s;opacity:0.02">ユ</text>
+    <text x="152" y="280" class="matrix" style="animation-delay:-2.47s;animation-duration:8.6s;opacity:0.02">ウ</text>
+    <text x="152" y="295" class="matrix" style="animation-delay:-2.47s;animation-duration:8.6s;opacity:0.02">ヌ</text>
+    <text x="177" y="10" class="matrix" style="animation-delay:-3.82s;animation-duration:11.0s;opacity:0.22">メ</text>
+    <text x="177" y="25" class="matrix" style="animation-delay:-3.82s;animation-duration:11.0s;opacity:0.15">0</text>
+    <text x="177" y="40" class="matrix" style="animation-delay:-3.82s;animation-duration:11.0s;opacity:0.15">レ</text>
+    <text x="177" y="55" class="matrix" style="animation-delay:-3.82s;animation-duration:11.0s;opacity:0.14">ヲ</text>
+    <text x="177" y="70" class="matrix" style="animation-delay:-3.82s;animation-duration:11.0s;opacity:0.13">カ</text>
+    <text x="177" y="85" class="matrix" style="animation-delay:-3.82s;animation-duration:11.0s;opacity:0.12">レ</text>
+    <text x="177" y="100" class="matrix" style="animation-delay:-3.82s;animation-duration:11.0s;opacity:0.12">ム</text>
+    <text x="177" y="115" class="matrix" style="animation-delay:-3.82s;animation-duration:11.0s;opacity:0.11">タ</text>
+    <text x="177" y="130" class="matrix" style="animation-delay:-3.82s;animation-duration:11.0s;opacity:0.10">リ</text>
+    <text x="177" y="145" class="matrix" style="animation-delay:-3.82s;animation-duration:11.0s;opacity:0.09">ト</text>
+    <text x="177" y="160" class="matrix" style="animation-delay:-3.82s;animation-duration:11.0s;opacity:0.09">カ</text>
+    <text x="177" y="175" class="matrix" style="animation-delay:-3.82s;animation-duration:11.0s;opacity:0.08">チ</text>
+    <text x="177" y="190" class="matrix" style="animation-delay:-3.82s;animation-duration:11.0s;opacity:0.07">ハ</text>
+    <text x="177" y="205" class="matrix" style="animation-delay:-3.82s;animation-duration:11.0s;opacity:0.06">ケ</text>
+    <text x="177" y="220" class="matrix" style="animation-delay:-3.82s;animation-duration:11.0s;opacity:0.06">フ</text>
+    <text x="177" y="235" class="matrix" style="animation-delay:-3.82s;animation-duration:11.0s;opacity:0.05">0</text>
+    <text x="177" y="250" class="matrix" style="animation-delay:-3.82s;animation-duration:11.0s;opacity:0.04">ヲ</text>
+    <text x="177" y="265" class="matrix" style="animation-delay:-3.82s;animation-duration:11.0s;opacity:0.03">ヲ</text>
+    <text x="177" y="280" class="matrix" style="animation-delay:-3.82s;animation-duration:11.0s;opacity:0.03">ソ</text>
+    <text x="177" y="295" class="matrix" style="animation-delay:-3.82s;animation-duration:11.0s;opacity:0.03">マ</text>
+    <text x="203" y="10" class="matrix" style="animation-delay:-7.62s;animation-duration:8.3s;opacity:0.12">ラ</text>
+    <text x="203" y="25" class="matrix" style="animation-delay:-7.62s;animation-duration:8.3s;opacity:0.09">ツ</text>
+    <text x="203" y="40" class="matrix" style="animation-delay:-7.62s;animation-duration:8.3s;opacity:0.08">ラ</text>
+    <text x="203" y="55" class="matrix" style="animation-delay:-7.62s;animation-duration:8.3s;opacity:0.08">マ</text>
+    <text x="203" y="70" class="matrix" style="animation-delay:-7.62s;animation-duration:8.3s;opacity:0.08">ユ</text>
+    <text x="203" y="85" class="matrix" style="animation-delay:-7.62s;animation-duration:8.3s;opacity:0.07">サ</text>
+    <text x="203" y="100" class="matrix" style="animation-delay:-7.62s;animation-duration:8.3s;opacity:0.07">ク</text>
+    <text x="203" y="115" class="matrix" style="animation-delay:-7.62s;animation-duration:8.3s;opacity:0.06">ニ</text>
+    <text x="203" y="130" class="matrix" style="animation-delay:-7.62s;animation-duration:8.3s;opacity:0.06">ケ</text>
+    <text x="203" y="145" class="matrix" style="animation-delay:-7.62s;animation-duration:8.3s;opacity:0.05">ム</text>
+    <text x="203" y="160" class="matrix" style="animation-delay:-7.62s;animation-duration:8.3s;opacity:0.05">ミ</text>
+    <text x="203" y="175" class="matrix" style="animation-delay:-7.62s;animation-duration:8.3s;opacity:0.05">0</text>
+    <text x="203" y="190" class="matrix" style="animation-delay:-7.62s;animation-duration:8.3s;opacity:0.04">ユ</text>
+    <text x="203" y="205" class="matrix" style="animation-delay:-7.62s;animation-duration:8.3s;opacity:0.04">テ</text>
+    <text x="203" y="220" class="matrix" style="animation-delay:-7.62s;animation-duration:8.3s;opacity:0.03">ホ</text>
+    <text x="203" y="235" class="matrix" style="animation-delay:-7.62s;animation-duration:8.3s;opacity:0.03">1</text>
+    <text x="203" y="250" class="matrix" style="animation-delay:-7.62s;animation-duration:8.3s;opacity:0.02">カ</text>
+    <text x="203" y="265" class="matrix" style="animation-delay:-7.62s;animation-duration:8.3s;opacity:0.02">ニ</text>
+    <text x="203" y="280" class="matrix" style="animation-delay:-7.62s;animation-duration:8.3s;opacity:0.01">ツ</text>
+    <text x="203" y="295" class="matrix" style="animation-delay:-7.62s;animation-duration:8.3s;opacity:0.01">セ</text>
+    <text x="228" y="10" class="matrix" style="animation-delay:-0.58s;animation-duration:10.3s;opacity:0.31">エ</text>
+    <text x="228" y="25" class="matrix" style="animation-delay:-0.58s;animation-duration:10.3s;opacity:0.22">ヲ</text>
+    <text x="228" y="40" class="matrix" style="animation-delay:-0.58s;animation-duration:10.3s;opacity:0.21">ホ</text>
+    <text x="228" y="55" class="matrix" style="animation-delay:-0.58s;animation-duration:10.3s;opacity:0.20">ウ</text>
+    <text x="228" y="70" class="matrix" style="animation-delay:-0.58s;animation-duration:10.3s;opacity:0.19">ム</text>
+    <text x="228" y="85" class="matrix" style="animation-delay:-0.58s;animation-duration:10.3s;opacity:0.18">キ</text>
+    <text x="228" y="100" class="matrix" style="animation-delay:-0.58s;animation-duration:10.3s;opacity:0.17">キ</text>
+    <text x="228" y="115" class="matrix" style="animation-delay:-0.58s;animation-duration:10.3s;opacity:0.16">ル</text>
+    <text x="228" y="130" class="matrix" style="animation-delay:-0.58s;animation-duration:10.3s;opacity:0.14">ヘ</text>
+    <text x="228" y="145" class="matrix" style="animation-delay:-0.58s;animation-duration:10.3s;opacity:0.13">メ</text>
+    <text x="228" y="160" class="matrix" style="animation-delay:-0.58s;animation-duration:10.3s;opacity:0.12">ケ</text>
+    <text x="228" y="175" class="matrix" style="animation-delay:-0.58s;animation-duration:10.3s;opacity:0.11">ソ</text>
+    <text x="228" y="190" class="matrix" style="animation-delay:-0.58s;animation-duration:10.3s;opacity:0.10">ミ</text>
+    <text x="228" y="205" class="matrix" style="animation-delay:-0.58s;animation-duration:10.3s;opacity:0.09">ユ</text>
+    <text x="228" y="220" class="matrix" style="animation-delay:-0.58s;animation-duration:10.3s;opacity:0.08">ハ</text>
+    <text x="228" y="235" class="matrix" style="animation-delay:-0.58s;animation-duration:10.3s;opacity:0.07">シ</text>
+    <text x="228" y="250" class="matrix" style="animation-delay:-0.58s;animation-duration:10.3s;opacity:0.06">ム</text>
+    <text x="228" y="265" class="matrix" style="animation-delay:-0.58s;animation-duration:10.3s;opacity:0.05">ヲ</text>
+    <text x="228" y="280" class="matrix" style="animation-delay:-0.58s;animation-duration:10.3s;opacity:0.04">ロ</text>
+    <text x="228" y="295" class="matrix" style="animation-delay:-0.58s;animation-duration:10.3s;opacity:0.04">サ</text>
+    <text x="254" y="10" class="matrix" style="animation-delay:-7.13s;animation-duration:7.7s;opacity:0.25">ニ</text>
+    <text x="254" y="25" class="matrix" style="animation-delay:-7.13s;animation-duration:7.7s;opacity:0.18">ヒ</text>
+    <text x="254" y="40" class="matrix" style="animation-delay:-7.13s;animation-duration:7.7s;opacity:0.17">ミ</text>
+    <text x="254" y="55" class="matrix" style="animation-delay:-7.13s;animation-duration:7.7s;opacity:0.16">ヒ</text>
+    <text x="254" y="70" class="matrix" style="animation-delay:-7.13s;animation-duration:7.7s;opacity:0.15">カ</text>
+    <text x="254" y="85" class="matrix" style="animation-delay:-7.13s;animation-duration:7.7s;opacity:0.14">セ</text>
+    <text x="254" y="100" class="matrix" style="animation-delay:-7.13s;animation-duration:7.7s;opacity:0.13">ス</text>
+    <text x="254" y="115" class="matrix" style="animation-delay:-7.13s;animation-duration:7.7s;opacity:0.13">ウ</text>
+    <text x="254" y="130" class="matrix" style="animation-delay:-7.13s;animation-duration:7.7s;opacity:0.12">ト</text>
+    <text x="254" y="145" class="matrix" style="animation-delay:-7.13s;animation-duration:7.7s;opacity:0.11">1</text>
+    <text x="254" y="160" class="matrix" style="animation-delay:-7.13s;animation-duration:7.7s;opacity:0.10">ヤ</text>
+    <text x="254" y="175" class="matrix" style="animation-delay:-7.13s;animation-duration:7.7s;opacity:0.09">メ</text>
+    <text x="254" y="190" class="matrix" style="animation-delay:-7.13s;animation-duration:7.7s;opacity:0.08">ス</text>
+    <text x="254" y="205" class="matrix" style="animation-delay:-7.13s;animation-duration:7.7s;opacity:0.07">ヤ</text>
+    <text x="254" y="220" class="matrix" style="animation-delay:-7.13s;animation-duration:7.7s;opacity:0.06">ス</text>
+    <text x="254" y="235" class="matrix" style="animation-delay:-7.13s;animation-duration:7.7s;opacity:0.06">0</text>
+    <text x="254" y="250" class="matrix" style="animation-delay:-7.13s;animation-duration:7.7s;opacity:0.05">ウ</text>
+    <text x="254" y="265" class="matrix" style="animation-delay:-7.13s;animation-duration:7.7s;opacity:0.04">ワ</text>
+    <text x="254" y="280" class="matrix" style="animation-delay:-7.13s;animation-duration:7.7s;opacity:0.03">ラ</text>
+    <text x="254" y="295" class="matrix" style="animation-delay:-7.13s;animation-duration:7.7s;opacity:0.03">イ</text>
+    <text x="280" y="10" class="matrix" style="animation-delay:-2.29s;animation-duration:10.5s;opacity:0.29">ウ</text>
+    <text x="280" y="25" class="matrix" style="animation-delay:-2.29s;animation-duration:10.5s;opacity:0.21">マ</text>
+    <text x="280" y="40" class="matrix" style="animation-delay:-2.29s;animation-duration:10.5s;opacity:0.20">セ</text>
+    <text x="280" y="55" class="matrix" style="animation-delay:-2.29s;animation-duration:10.5s;opacity:0.19">タ</text>
+    <text x="280" y="70" class="matrix" style="animation-delay:-2.29s;animation-duration:10.5s;opacity:0.18">ル</text>
+    <text x="280" y="85" class="matrix" style="animation-delay:-2.29s;animation-duration:10.5s;opacity:0.17">ホ</text>
+    <text x="280" y="100" class="matrix" style="animation-delay:-2.29s;animation-duration:10.5s;opacity:0.16">シ</text>
+    <text x="280" y="115" class="matrix" style="animation-delay:-2.29s;animation-duration:10.5s;opacity:0.15">ム</text>
+    <text x="280" y="130" class="matrix" style="animation-delay:-2.29s;animation-duration:10.5s;opacity:0.14">キ</text>
+    <text x="280" y="145" class="matrix" style="animation-delay:-2.29s;animation-duration:10.5s;opacity:0.13">ヲ</text>
+    <text x="280" y="160" class="matrix" style="animation-delay:-2.29s;animation-duration:10.5s;opacity:0.12">モ</text>
+    <text x="280" y="175" class="matrix" style="animation-delay:-2.29s;animation-duration:10.5s;opacity:0.11">モ</text>
+    <text x="280" y="190" class="matrix" style="animation-delay:-2.29s;animation-duration:10.5s;opacity:0.10">ヘ</text>
+    <text x="280" y="205" class="matrix" style="animation-delay:-2.29s;animation-duration:10.5s;opacity:0.09">セ</text>
+    <text x="280" y="220" class="matrix" style="animation-delay:-2.29s;animation-duration:10.5s;opacity:0.08">ヘ</text>
+    <text x="280" y="235" class="matrix" style="animation-delay:-2.29s;animation-duration:10.5s;opacity:0.07">ノ</text>
+    <text x="280" y="250" class="matrix" style="animation-delay:-2.29s;animation-duration:10.5s;opacity:0.05">サ</text>
+    <text x="280" y="265" class="matrix" style="animation-delay:-2.29s;animation-duration:10.5s;opacity:0.04">オ</text>
+    <text x="280" y="280" class="matrix" style="animation-delay:-2.29s;animation-duration:10.5s;opacity:0.03">オ</text>
+    <text x="280" y="295" class="matrix" style="animation-delay:-2.29s;animation-duration:10.5s;opacity:0.03">ル</text>
+    <text x="305" y="10" class="matrix" style="animation-delay:-4.31s;animation-duration:7.8s;opacity:0.20">ヲ</text>
+    <text x="305" y="25" class="matrix" style="animation-delay:-4.31s;animation-duration:7.8s;opacity:0.14">イ</text>
+    <text x="305" y="40" class="matrix" style="animation-delay:-4.31s;animation-duration:7.8s;opacity:0.14">レ</text>
+    <text x="305" y="55" class="matrix" style="animation-delay:-4.31s;animation-duration:7.8s;opacity:0.13">リ</text>
+    <text x="305" y="70" class="matrix" style="animation-delay:-4.31s;animation-duration:7.8s;opacity:0.12">リ</text>
+    <text x="305" y="85" class="matrix" style="animation-delay:-4.31s;animation-duration:7.8s;opacity:0.12">オ</text>
+    <text x="305" y="100" class="matrix" style="animation-delay:-4.31s;animation-duration:7.8s;opacity:0.11">イ</text>
+    <text x="305" y="115" class="matrix" style="animation-delay:-4.31s;animation-duration:7.8s;opacity:0.10">ネ</text>
+    <text x="305" y="130" class="matrix" style="animation-delay:-4.31s;animation-duration:7.8s;opacity:0.10">ヲ</text>
+    <text x="305" y="145" class="matrix" style="animation-delay:-4.31s;animation-duration:7.8s;opacity:0.09">ト</text>
+    <text x="305" y="160" class="matrix" style="animation-delay:-4.31s;animation-duration:7.8s;opacity:0.08">オ</text>
+    <text x="305" y="175" class="matrix" style="animation-delay:-4.31s;animation-duration:7.8s;opacity:0.07">セ</text>
+    <text x="305" y="190" class="matrix" style="animation-delay:-4.31s;animation-duration:7.8s;opacity:0.07">サ</text>
+    <text x="305" y="205" class="matrix" style="animation-delay:-4.31s;animation-duration:7.8s;opacity:0.06">サ</text>
+    <text x="305" y="220" class="matrix" style="animation-delay:-4.31s;animation-duration:7.8s;opacity:0.05">ム</text>
+    <text x="305" y="235" class="matrix" style="animation-delay:-4.31s;animation-duration:7.8s;opacity:0.05">ヒ</text>
+    <text x="305" y="250" class="matrix" style="animation-delay:-4.31s;animation-duration:7.8s;opacity:0.04">キ</text>
+    <text x="305" y="265" class="matrix" style="animation-delay:-4.31s;animation-duration:7.8s;opacity:0.03">ハ</text>
+    <text x="305" y="280" class="matrix" style="animation-delay:-4.31s;animation-duration:7.8s;opacity:0.02">コ</text>
+    <text x="305" y="295" class="matrix" style="animation-delay:-4.31s;animation-duration:7.8s;opacity:0.02">タ</text>
+    <text x="331" y="10" class="matrix" style="animation-delay:-4.63s;animation-duration:10.3s;opacity:0.12">メ</text>
+    <text x="331" y="25" class="matrix" style="animation-delay:-4.63s;animation-duration:10.3s;opacity:0.08">オ</text>
+    <text x="331" y="40" class="matrix" style="animation-delay:-4.63s;animation-duration:10.3s;opacity:0.08">イ</text>
+    <text x="331" y="55" class="matrix" style="animation-delay:-4.63s;animation-duration:10.3s;opacity:0.08">リ</text>
+    <text x="331" y="70" class="matrix" style="animation-delay:-4.63s;animation-duration:10.3s;opacity:0.07">ム</text>
+    <text x="331" y="85" class="matrix" style="animation-delay:-4.63s;animation-duration:10.3s;opacity:0.07">0</text>
+    <text x="331" y="100" class="matrix" style="animation-delay:-4.63s;animation-duration:10.3s;opacity:0.06">エ</text>
+    <text x="331" y="115" class="matrix" style="animation-delay:-4.63s;animation-duration:10.3s;opacity:0.06">セ</text>
+    <text x="331" y="130" class="matrix" style="animation-delay:-4.63s;animation-duration:10.3s;opacity:0.05">ケ</text>
+    <text x="331" y="145" class="matrix" style="animation-delay:-4.63s;animation-duration:10.3s;opacity:0.05">ノ</text>
+    <text x="331" y="160" class="matrix" style="animation-delay:-4.63s;animation-duration:10.3s;opacity:0.05">ホ</text>
+    <text x="331" y="175" class="matrix" style="animation-delay:-4.63s;animation-duration:10.3s;opacity:0.04">ヘ</text>
+    <text x="331" y="190" class="matrix" style="animation-delay:-4.63s;animation-duration:10.3s;opacity:0.04">シ</text>
+    <text x="331" y="205" class="matrix" style="animation-delay:-4.63s;animation-duration:10.3s;opacity:0.03">ネ</text>
+    <text x="331" y="220" class="matrix" style="animation-delay:-4.63s;animation-duration:10.3s;opacity:0.03">イ</text>
+    <text x="331" y="235" class="matrix" style="animation-delay:-4.63s;animation-duration:10.3s;opacity:0.03">ケ</text>
+    <text x="331" y="250" class="matrix" style="animation-delay:-4.63s;animation-duration:10.3s;opacity:0.02">ヌ</text>
+    <text x="331" y="265" class="matrix" style="animation-delay:-4.63s;animation-duration:10.3s;opacity:0.02">0</text>
+    <text x="331" y="280" class="matrix" style="animation-delay:-4.63s;animation-duration:10.3s;opacity:0.01">ヌ</text>
+    <text x="331" y="295" class="matrix" style="animation-delay:-4.63s;animation-duration:10.3s;opacity:0.01">ソ</text>
+    <text x="356" y="10" class="matrix" style="animation-delay:-9.27s;animation-duration:9.8s;opacity:0.16">ロ</text>
+    <text x="356" y="25" class="matrix" style="animation-delay:-9.27s;animation-duration:9.8s;opacity:0.12">ヲ</text>
+    <text x="356" y="40" class="matrix" style="animation-delay:-9.27s;animation-duration:9.8s;opacity:0.11">メ</text>
+    <text x="356" y="55" class="matrix" style="animation-delay:-9.27s;animation-duration:9.8s;opacity:0.10">ル</text>
+    <text x="356" y="70" class="matrix" style="animation-delay:-9.27s;animation-duration:9.8s;opacity:0.10">ワ</text>
+    <text x="356" y="85" class="matrix" style="animation-delay:-9.27s;animation-duration:9.8s;opacity:0.09">ホ</text>
+    <text x="356" y="100" class="matrix" style="animation-delay:-9.27s;animation-duration:9.8s;opacity:0.09">ク</text>
+    <text x="356" y="115" class="matrix" style="animation-delay:-9.27s;animation-duration:9.8s;opacity:0.08">サ</text>
+    <text x="356" y="130" class="matrix" style="animation-delay:-9.27s;animation-duration:9.8s;opacity:0.08">チ</text>
+    <text x="356" y="145" class="matrix" style="animation-delay:-9.27s;animation-duration:9.8s;opacity:0.07">シ</text>
+    <text x="356" y="160" class="matrix" style="animation-delay:-9.27s;animation-duration:9.8s;opacity:0.07">イ</text>
+    <text x="356" y="175" class="matrix" style="animation-delay:-9.27s;animation-duration:9.8s;opacity:0.06">ヤ</text>
+    <text x="356" y="190" class="matrix" style="animation-delay:-9.27s;animation-duration:9.8s;opacity:0.05">ン</text>
+    <text x="356" y="205" class="matrix" style="animation-delay:-9.27s;animation-duration:9.8s;opacity:0.05">ム</text>
+    <text x="356" y="220" class="matrix" style="animation-delay:-9.27s;animation-duration:9.8s;opacity:0.04">イ</text>
+    <text x="356" y="235" class="matrix" style="animation-delay:-9.27s;animation-duration:9.8s;opacity:0.04">ン</text>
+    <text x="356" y="250" class="matrix" style="animation-delay:-9.27s;animation-duration:9.8s;opacity:0.03">テ</text>
+    <text x="356" y="265" class="matrix" style="animation-delay:-9.27s;animation-duration:9.8s;opacity:0.03">イ</text>
+    <text x="356" y="280" class="matrix" style="animation-delay:-9.27s;animation-duration:9.8s;opacity:0.02">イ</text>
+    <text x="356" y="295" class="matrix" style="animation-delay:-9.27s;animation-duration:9.8s;opacity:0.02">ヤ</text>
+    <text x="382" y="10" class="matrix" style="animation-delay:-4.77s;animation-duration:10.6s;opacity:0.22">イ</text>
+    <text x="382" y="25" class="matrix" style="animation-delay:-4.77s;animation-duration:10.6s;opacity:0.16">マ</text>
+    <text x="382" y="40" class="matrix" style="animation-delay:-4.77s;animation-duration:10.6s;opacity:0.15">エ</text>
+    <text x="382" y="55" class="matrix" style="animation-delay:-4.77s;animation-duration:10.6s;opacity:0.14">コ</text>
+    <text x="382" y="70" class="matrix" style="animation-delay:-4.77s;animation-duration:10.6s;opacity:0.13">ウ</text>
+    <text x="382" y="85" class="matrix" style="animation-delay:-4.77s;animation-duration:10.6s;opacity:0.12">ユ</text>
+    <text x="382" y="100" class="matrix" style="animation-delay:-4.77s;animation-duration:10.6s;opacity:0.12">ウ</text>
+    <text x="382" y="115" class="matrix" style="animation-delay:-4.77s;animation-duration:10.6s;opacity:0.11">レ</text>
+    <text x="382" y="130" class="matrix" style="animation-delay:-4.77s;animation-duration:10.6s;opacity:0.10">セ</text>
+    <text x="382" y="145" class="matrix" style="animation-delay:-4.77s;animation-duration:10.6s;opacity:0.09">ネ</text>
+    <text x="382" y="160" class="matrix" style="animation-delay:-4.77s;animation-duration:10.6s;opacity:0.09">カ</text>
+    <text x="382" y="175" class="matrix" style="animation-delay:-4.77s;animation-duration:10.6s;opacity:0.08">モ</text>
+    <text x="382" y="190" class="matrix" style="animation-delay:-4.77s;animation-duration:10.6s;opacity:0.07">セ</text>
+    <text x="382" y="205" class="matrix" style="animation-delay:-4.77s;animation-duration:10.6s;opacity:0.06">ヤ</text>
+    <text x="382" y="220" class="matrix" style="animation-delay:-4.77s;animation-duration:10.6s;opacity:0.06">ユ</text>
+    <text x="382" y="235" class="matrix" style="animation-delay:-4.77s;animation-duration:10.6s;opacity:0.05">ア</text>
+    <text x="382" y="250" class="matrix" style="animation-delay:-4.77s;animation-duration:10.6s;opacity:0.04">ヨ</text>
+    <text x="382" y="265" class="matrix" style="animation-delay:-4.77s;animation-duration:10.6s;opacity:0.03">エ</text>
+    <text x="382" y="280" class="matrix" style="animation-delay:-4.77s;animation-duration:10.6s;opacity:0.03">ノ</text>
+    <text x="382" y="295" class="matrix" style="animation-delay:-4.77s;animation-duration:10.6s;opacity:0.03">ル</text>
+    <text x="408" y="10" class="matrix" style="animation-delay:-5.84s;animation-duration:8.4s;opacity:0.31">シ</text>
+    <text x="408" y="25" class="matrix" style="animation-delay:-5.84s;animation-duration:8.4s;opacity:0.22">ル</text>
+    <text x="408" y="40" class="matrix" style="animation-delay:-5.84s;animation-duration:8.4s;opacity:0.21">ワ</text>
+    <text x="408" y="55" class="matrix" style="animation-delay:-5.84s;animation-duration:8.4s;opacity:0.20">テ</text>
+    <text x="408" y="70" class="matrix" style="animation-delay:-5.84s;animation-duration:8.4s;opacity:0.19">セ</text>
+    <text x="408" y="85" class="matrix" style="animation-delay:-5.84s;animation-duration:8.4s;opacity:0.18">ソ</text>
+    <text x="408" y="100" class="matrix" style="animation-delay:-5.84s;animation-duration:8.4s;opacity:0.17">ネ</text>
+    <text x="408" y="115" class="matrix" style="animation-delay:-5.84s;animation-duration:8.4s;opacity:0.15">キ</text>
+    <text x="408" y="130" class="matrix" style="animation-delay:-5.84s;animation-duration:8.4s;opacity:0.14">ル</text>
+    <text x="408" y="145" class="matrix" style="animation-delay:-5.84s;animation-duration:8.4s;opacity:0.13">リ</text>
+    <text x="408" y="160" class="matrix" style="animation-delay:-5.84s;animation-duration:8.4s;opacity:0.12">ツ</text>
+    <text x="408" y="175" class="matrix" style="animation-delay:-5.84s;animation-duration:8.4s;opacity:0.11">フ</text>
+    <text x="408" y="190" class="matrix" style="animation-delay:-5.84s;animation-duration:8.4s;opacity:0.10">テ</text>
+    <text x="408" y="205" class="matrix" style="animation-delay:-5.84s;animation-duration:8.4s;opacity:0.09">ウ</text>
+    <text x="408" y="220" class="matrix" style="animation-delay:-5.84s;animation-duration:8.4s;opacity:0.08">0</text>
+    <text x="408" y="235" class="matrix" style="animation-delay:-5.84s;animation-duration:8.4s;opacity:0.07">フ</text>
+    <text x="408" y="250" class="matrix" style="animation-delay:-5.84s;animation-duration:8.4s;opacity:0.06">ヨ</text>
+    <text x="408" y="265" class="matrix" style="animation-delay:-5.84s;animation-duration:8.4s;opacity:0.05">モ</text>
+    <text x="408" y="280" class="matrix" style="animation-delay:-5.84s;animation-duration:8.4s;opacity:0.04">オ</text>
+    <text x="408" y="295" class="matrix" style="animation-delay:-5.84s;animation-duration:8.4s;opacity:0.04">ウ</text>
+    <text x="433" y="10" class="matrix" style="animation-delay:-5.38s;animation-duration:8.3s;opacity:0.13">ナ</text>
+    <text x="433" y="25" class="matrix" style="animation-delay:-5.38s;animation-duration:8.3s;opacity:0.09">ウ</text>
+    <text x="433" y="40" class="matrix" style="animation-delay:-5.38s;animation-duration:8.3s;opacity:0.09">セ</text>
+    <text x="433" y="55" class="matrix" style="animation-delay:-5.38s;animation-duration:8.3s;opacity:0.08">ニ</text>
+    <text x="433" y="70" class="matrix" style="animation-delay:-5.38s;animation-duration:8.3s;opacity:0.08">チ</text>
+    <text x="433" y="85" class="matrix" style="animation-delay:-5.38s;animation-duration:8.3s;opacity:0.07">ケ</text>
+    <text x="433" y="100" class="matrix" style="animation-delay:-5.38s;animation-duration:8.3s;opacity:0.07">ヒ</text>
+    <text x="433" y="115" class="matrix" style="animation-delay:-5.38s;animation-duration:8.3s;opacity:0.07">ム</text>
+    <text x="433" y="130" class="matrix" style="animation-delay:-5.38s;animation-duration:8.3s;opacity:0.06">ワ</text>
+    <text x="433" y="145" class="matrix" style="animation-delay:-5.38s;animation-duration:8.3s;opacity:0.06">ツ</text>
+    <text x="433" y="160" class="matrix" style="animation-delay:-5.38s;animation-duration:8.3s;opacity:0.05">ヨ</text>
+    <text x="433" y="175" class="matrix" style="animation-delay:-5.38s;animation-duration:8.3s;opacity:0.05">リ</text>
+    <text x="433" y="190" class="matrix" style="animation-delay:-5.38s;animation-duration:8.3s;opacity:0.04">ミ</text>
+    <text x="433" y="205" class="matrix" style="animation-delay:-5.38s;animation-duration:8.3s;opacity:0.04">0</text>
+    <text x="433" y="220" class="matrix" style="animation-delay:-5.38s;animation-duration:8.3s;opacity:0.03">ル</text>
+    <text x="433" y="235" class="matrix" style="animation-delay:-5.38s;animation-duration:8.3s;opacity:0.03">メ</text>
+    <text x="433" y="250" class="matrix" style="animation-delay:-5.38s;animation-duration:8.3s;opacity:0.02">ツ</text>
+    <text x="433" y="265" class="matrix" style="animation-delay:-5.38s;animation-duration:8.3s;opacity:0.02">ル</text>
+    <text x="433" y="280" class="matrix" style="animation-delay:-5.38s;animation-duration:8.3s;opacity:0.02">オ</text>
+    <text x="433" y="295" class="matrix" style="animation-delay:-5.38s;animation-duration:8.3s;opacity:0.02">キ</text>
+    <text x="459" y="10" class="matrix" style="animation-delay:-2.64s;animation-duration:10.4s;opacity:0.26">ク</text>
+    <text x="459" y="25" class="matrix" style="animation-delay:-2.64s;animation-duration:10.4s;opacity:0.19">タ</text>
+    <text x="459" y="40" class="matrix" style="animation-delay:-2.64s;animation-duration:10.4s;opacity:0.18">チ</text>
+    <text x="459" y="55" class="matrix" style="animation-delay:-2.64s;animation-duration:10.4s;opacity:0.17">ユ</text>
+    <text x="459" y="70" class="matrix" style="animation-delay:-2.64s;animation-duration:10.4s;opacity:0.16">シ</text>
+    <text x="459" y="85" class="matrix" style="animation-delay:-2.64s;animation-duration:10.4s;opacity:0.15">ワ</text>
+    <text x="459" y="100" class="matrix" style="animation-delay:-2.64s;animation-duration:10.4s;opacity:0.14">ト</text>
+    <text x="459" y="115" class="matrix" style="animation-delay:-2.64s;animation-duration:10.4s;opacity:0.13">シ</text>
+    <text x="459" y="130" class="matrix" style="animation-delay:-2.64s;animation-duration:10.4s;opacity:0.12">レ</text>
+    <text x="459" y="145" class="matrix" style="animation-delay:-2.64s;animation-duration:10.4s;opacity:0.11">ラ</text>
+    <text x="459" y="160" class="matrix" style="animation-delay:-2.64s;animation-duration:10.4s;opacity:0.11">ソ</text>
+    <text x="459" y="175" class="matrix" style="animation-delay:-2.64s;animation-duration:10.4s;opacity:0.10">マ</text>
+    <text x="459" y="190" class="matrix" style="animation-delay:-2.64s;animation-duration:10.4s;opacity:0.09">ホ</text>
+    <text x="459" y="205" class="matrix" style="animation-delay:-2.64s;animation-duration:10.4s;opacity:0.08">ソ</text>
+    <text x="459" y="220" class="matrix" style="animation-delay:-2.64s;animation-duration:10.4s;opacity:0.07">イ</text>
+    <text x="459" y="235" class="matrix" style="animation-delay:-2.64s;animation-duration:10.4s;opacity:0.06">エ</text>
+    <text x="459" y="250" class="matrix" style="animation-delay:-2.64s;animation-duration:10.4s;opacity:0.05">ラ</text>
+    <text x="459" y="265" class="matrix" style="animation-delay:-2.64s;animation-duration:10.4s;opacity:0.04">ハ</text>
+    <text x="459" y="280" class="matrix" style="animation-delay:-2.64s;animation-duration:10.4s;opacity:0.03">タ</text>
+    <text x="459" y="295" class="matrix" style="animation-delay:-2.64s;animation-duration:10.4s;opacity:0.03">ア</text>
+    <text x="484" y="10" class="matrix" style="animation-delay:-0.04s;animation-duration:9.7s;opacity:0.24">ソ</text>
+    <text x="484" y="25" class="matrix" style="animation-delay:-0.04s;animation-duration:9.7s;opacity:0.17">ケ</text>
+    <text x="484" y="40" class="matrix" style="animation-delay:-0.04s;animation-duration:9.7s;opacity:0.16">ン</text>
+    <text x="484" y="55" class="matrix" style="animation-delay:-0.04s;animation-duration:9.7s;opacity:0.15">ヒ</text>
+    <text x="484" y="70" class="matrix" style="animation-delay:-0.04s;animation-duration:9.7s;opacity:0.15">メ</text>
+    <text x="484" y="85" class="matrix" style="animation-delay:-0.04s;animation-duration:9.7s;opacity:0.14">ワ</text>
+    <text x="484" y="100" class="matrix" style="animation-delay:-0.04s;animation-duration:9.7s;opacity:0.13">ハ</text>
+    <text x="484" y="115" class="matrix" style="animation-delay:-0.04s;animation-duration:9.7s;opacity:0.12">メ</text>
+    <text x="484" y="130" class="matrix" style="animation-delay:-0.04s;animation-duration:9.7s;opacity:0.11">0</text>
+    <text x="484" y="145" class="matrix" style="animation-delay:-0.04s;animation-duration:9.7s;opacity:0.10">カ</text>
+    <text x="484" y="160" class="matrix" style="animation-delay:-0.04s;animation-duration:9.7s;opacity:0.10">ウ</text>
+    <text x="484" y="175" class="matrix" style="animation-delay:-0.04s;animation-duration:9.7s;opacity:0.09">ロ</text>
+    <text x="484" y="190" class="matrix" style="animation-delay:-0.04s;animation-duration:9.7s;opacity:0.08">ク</text>
+    <text x="484" y="205" class="matrix" style="animation-delay:-0.04s;animation-duration:9.7s;opacity:0.07">ム</text>
+    <text x="484" y="220" class="matrix" style="animation-delay:-0.04s;animation-duration:9.7s;opacity:0.06">ア</text>
+    <text x="484" y="235" class="matrix" style="animation-delay:-0.04s;animation-duration:9.7s;opacity:0.05">ニ</text>
+    <text x="484" y="250" class="matrix" style="animation-delay:-0.04s;animation-duration:9.7s;opacity:0.05">ヤ</text>
+    <text x="484" y="265" class="matrix" style="animation-delay:-0.04s;animation-duration:9.7s;opacity:0.04">メ</text>
+    <text x="484" y="280" class="matrix" style="animation-delay:-0.04s;animation-duration:9.7s;opacity:0.03">ク</text>
+    <text x="484" y="295" class="matrix" style="animation-delay:-0.04s;animation-duration:9.7s;opacity:0.03">ハ</text>
+    <text x="510" y="10" class="matrix" style="animation-delay:-1.27s;animation-duration:7.2s;opacity:0.30">ア</text>
+    <text x="510" y="25" class="matrix" style="animation-delay:-1.27s;animation-duration:7.2s;opacity:0.21">ナ</text>
+    <text x="510" y="40" class="matrix" style="animation-delay:-1.27s;animation-duration:7.2s;opacity:0.20">シ</text>
+    <text x="510" y="55" class="matrix" style="animation-delay:-1.27s;animation-duration:7.2s;opacity:0.19">レ</text>
+    <text x="510" y="70" class="matrix" style="animation-delay:-1.27s;animation-duration:7.2s;opacity:0.18">セ</text>
+    <text x="510" y="85" class="matrix" style="animation-delay:-1.27s;animation-duration:7.2s;opacity:0.17">ル</text>
+    <text x="510" y="100" class="matrix" style="animation-delay:-1.27s;animation-duration:7.2s;opacity:0.16">オ</text>
+    <text x="510" y="115" class="matrix" style="animation-delay:-1.27s;animation-duration:7.2s;opacity:0.15">ナ</text>
+    <text x="510" y="130" class="matrix" style="animation-delay:-1.27s;animation-duration:7.2s;opacity:0.14">メ</text>
+    <text x="510" y="145" class="matrix" style="animation-delay:-1.27s;animation-duration:7.2s;opacity:0.13">ノ</text>
+    <text x="510" y="160" class="matrix" style="animation-delay:-1.27s;animation-duration:7.2s;opacity:0.12">ヨ</text>
+    <text x="510" y="175" class="matrix" style="animation-delay:-1.27s;animation-duration:7.2s;opacity:0.11">ン</text>
+    <text x="510" y="190" class="matrix" style="animation-delay:-1.27s;animation-duration:7.2s;opacity:0.10">ク</text>
+    <text x="510" y="205" class="matrix" style="animation-delay:-1.27s;animation-duration:7.2s;opacity:0.09">セ</text>
+    <text x="510" y="220" class="matrix" style="animation-delay:-1.27s;animation-duration:7.2s;opacity:0.08">ケ</text>
+    <text x="510" y="235" class="matrix" style="animation-delay:-1.27s;animation-duration:7.2s;opacity:0.07">コ</text>
+    <text x="510" y="250" class="matrix" style="animation-delay:-1.27s;animation-duration:7.2s;opacity:0.06">ノ</text>
+    <text x="510" y="265" class="matrix" style="animation-delay:-1.27s;animation-duration:7.2s;opacity:0.05">1</text>
+    <text x="510" y="280" class="matrix" style="animation-delay:-1.27s;animation-duration:7.2s;opacity:0.04">コ</text>
+    <text x="510" y="295" class="matrix" style="animation-delay:-1.27s;animation-duration:7.2s;opacity:0.04">ン</text>
+    <text x="536" y="10" class="matrix" style="animation-delay:-9.24s;animation-duration:9.8s;opacity:0.19">ル</text>
+    <text x="536" y="25" class="matrix" style="animation-delay:-9.24s;animation-duration:9.8s;opacity:0.14">ン</text>
+    <text x="536" y="40" class="matrix" style="animation-delay:-9.24s;animation-duration:9.8s;opacity:0.13">セ</text>
+    <text x="536" y="55" class="matrix" style="animation-delay:-9.24s;animation-duration:9.8s;opacity:0.12">タ</text>
+    <text x="536" y="70" class="matrix" style="animation-delay:-9.24s;animation-duration:9.8s;opacity:0.12">ケ</text>
+    <text x="536" y="85" class="matrix" style="animation-delay:-9.24s;animation-duration:9.8s;opacity:0.11">ロ</text>
+    <text x="536" y="100" class="matrix" style="animation-delay:-9.24s;animation-duration:9.8s;opacity:0.10">オ</text>
+    <text x="536" y="115" class="matrix" style="animation-delay:-9.24s;animation-duration:9.8s;opacity:0.10">ヌ</text>
+    <text x="536" y="130" class="matrix" style="animation-delay:-9.24s;animation-duration:9.8s;opacity:0.09">ア</text>
+    <text x="536" y="145" class="matrix" style="animation-delay:-9.24s;animation-duration:9.8s;opacity:0.08">ヘ</text>
+    <text x="536" y="160" class="matrix" style="animation-delay:-9.24s;animation-duration:9.8s;opacity:0.08">ス</text>
+    <text x="536" y="175" class="matrix" style="animation-delay:-9.24s;animation-duration:9.8s;opacity:0.07">サ</text>
+    <text x="536" y="190" class="matrix" style="animation-delay:-9.24s;animation-duration:9.8s;opacity:0.06">フ</text>
+    <text x="536" y="205" class="matrix" style="animation-delay:-9.24s;animation-duration:9.8s;opacity:0.06">ナ</text>
+    <text x="536" y="220" class="matrix" style="animation-delay:-9.24s;animation-duration:9.8s;opacity:0.05">ツ</text>
+    <text x="536" y="235" class="matrix" style="animation-delay:-9.24s;animation-duration:9.8s;opacity:0.04">ス</text>
+    <text x="536" y="250" class="matrix" style="animation-delay:-9.24s;animation-duration:9.8s;opacity:0.04">ス</text>
+    <text x="536" y="265" class="matrix" style="animation-delay:-9.24s;animation-duration:9.8s;opacity:0.03">1</text>
+    <text x="536" y="280" class="matrix" style="animation-delay:-9.24s;animation-duration:9.8s;opacity:0.02">ル</text>
+    <text x="536" y="295" class="matrix" style="animation-delay:-9.24s;animation-duration:9.8s;opacity:0.02">サ</text>
+    <text x="561" y="10" class="matrix" style="animation-delay:-3.98s;animation-duration:7.0s;opacity:0.12">タ</text>
+    <text x="561" y="25" class="matrix" style="animation-delay:-3.98s;animation-duration:7.0s;opacity:0.08">ナ</text>
+    <text x="561" y="40" class="matrix" style="animation-delay:-3.98s;animation-duration:7.0s;opacity:0.08">リ</text>
+    <text x="561" y="55" class="matrix" style="animation-delay:-3.98s;animation-duration:7.0s;opacity:0.07">マ</text>
+    <text x="561" y="70" class="matrix" style="animation-delay:-3.98s;animation-duration:7.0s;opacity:0.07">ネ</text>
+    <text x="561" y="85" class="matrix" style="animation-delay:-3.98s;animation-duration:7.0s;opacity:0.07">レ</text>
+    <text x="561" y="100" class="matrix" style="animation-delay:-3.98s;animation-duration:7.0s;opacity:0.06">ム</text>
+    <text x="561" y="115" class="matrix" style="animation-delay:-3.98s;animation-duration:7.0s;opacity:0.06">ト</text>
+    <text x="561" y="130" class="matrix" style="animation-delay:-3.98s;animation-duration:7.0s;opacity:0.05">1</text>
+    <text x="561" y="145" class="matrix" style="animation-delay:-3.98s;animation-duration:7.0s;opacity:0.05">カ</text>
+    <text x="561" y="160" class="matrix" style="animation-delay:-3.98s;animation-duration:7.0s;opacity:0.05">ソ</text>
+    <text x="561" y="175" class="matrix" style="animation-delay:-3.98s;animation-duration:7.0s;opacity:0.04">コ</text>
+    <text x="561" y="190" class="matrix" style="animation-delay:-3.98s;animation-duration:7.0s;opacity:0.04">ヤ</text>
+    <text x="561" y="205" class="matrix" style="animation-delay:-3.98s;animation-duration:7.0s;opacity:0.03">ソ</text>
+    <text x="561" y="220" class="matrix" style="animation-delay:-3.98s;animation-duration:7.0s;opacity:0.03">ア</text>
+    <text x="561" y="235" class="matrix" style="animation-delay:-3.98s;animation-duration:7.0s;opacity:0.03">オ</text>
+    <text x="561" y="250" class="matrix" style="animation-delay:-3.98s;animation-duration:7.0s;opacity:0.02">ユ</text>
+    <text x="561" y="265" class="matrix" style="animation-delay:-3.98s;animation-duration:7.0s;opacity:0.02">ハ</text>
+    <text x="561" y="280" class="matrix" style="animation-delay:-3.98s;animation-duration:7.0s;opacity:0.01">ナ</text>
+    <text x="561" y="295" class="matrix" style="animation-delay:-3.98s;animation-duration:7.0s;opacity:0.01">ヲ</text>
+    <text x="587" y="10" class="matrix" style="animation-delay:-7.86s;animation-duration:7.9s;opacity:0.32">カ</text>
+    <text x="587" y="25" class="matrix" style="animation-delay:-7.86s;animation-duration:7.9s;opacity:0.23">ヌ</text>
+    <text x="587" y="40" class="matrix" style="animation-delay:-7.86s;animation-duration:7.9s;opacity:0.22">モ</text>
+    <text x="587" y="55" class="matrix" style="animation-delay:-7.86s;animation-duration:7.9s;opacity:0.20">サ</text>
+    <text x="587" y="70" class="matrix" style="animation-delay:-7.86s;animation-duration:7.9s;opacity:0.19">ソ</text>
+    <text x="587" y="85" class="matrix" style="animation-delay:-7.86s;animation-duration:7.9s;opacity:0.18">ア</text>
+    <text x="587" y="100" class="matrix" style="animation-delay:-7.86s;animation-duration:7.9s;opacity:0.17">ワ</text>
+    <text x="587" y="115" class="matrix" style="animation-delay:-7.86s;animation-duration:7.9s;opacity:0.16">ハ</text>
+    <text x="587" y="130" class="matrix" style="animation-delay:-7.86s;animation-duration:7.9s;opacity:0.15">0</text>
+    <text x="587" y="145" class="matrix" style="animation-delay:-7.86s;animation-duration:7.9s;opacity:0.14">ミ</text>
+    <text x="587" y="160" class="matrix" style="animation-delay:-7.86s;animation-duration:7.9s;opacity:0.13">ム</text>
+    <text x="587" y="175" class="matrix" style="animation-delay:-7.86s;animation-duration:7.9s;opacity:0.12">レ</text>
+    <text x="587" y="190" class="matrix" style="animation-delay:-7.86s;animation-duration:7.9s;opacity:0.10">ヲ</text>
+    <text x="587" y="205" class="matrix" style="animation-delay:-7.86s;animation-duration:7.9s;opacity:0.09">ン</text>
+    <text x="587" y="220" class="matrix" style="animation-delay:-7.86s;animation-duration:7.9s;opacity:0.08">ン</text>
+    <text x="587" y="235" class="matrix" style="animation-delay:-7.86s;animation-duration:7.9s;opacity:0.07">ル</text>
+    <text x="587" y="250" class="matrix" style="animation-delay:-7.86s;animation-duration:7.9s;opacity:0.06">サ</text>
+    <text x="587" y="265" class="matrix" style="animation-delay:-7.86s;animation-duration:7.9s;opacity:0.05">ニ</text>
+    <text x="587" y="280" class="matrix" style="animation-delay:-7.86s;animation-duration:7.9s;opacity:0.04">ハ</text>
+    <text x="587" y="295" class="matrix" style="animation-delay:-7.86s;animation-duration:7.9s;opacity:0.04">ウ</text>
+    <text x="612" y="10" class="matrix" style="animation-delay:-9.49s;animation-duration:10.6s;opacity:0.24">ル</text>
+    <text x="612" y="25" class="matrix" style="animation-delay:-9.49s;animation-duration:10.6s;opacity:0.17">カ</text>
+    <text x="612" y="40" class="matrix" style="animation-delay:-9.49s;animation-duration:10.6s;opacity:0.16">ヲ</text>
+    <text x="612" y="55" class="matrix" style="animation-delay:-9.49s;animation-duration:10.6s;opacity:0.15">ツ</text>
+    <text x="612" y="70" class="matrix" style="animation-delay:-9.49s;animation-duration:10.6s;opacity:0.14">マ</text>
+    <text x="612" y="85" class="matrix" style="animation-delay:-9.49s;animation-duration:10.6s;opacity:0.14">ツ</text>
+    <text x="612" y="100" class="matrix" style="animation-delay:-9.49s;animation-duration:10.6s;opacity:0.13">ル</text>
+    <text x="612" y="115" class="matrix" style="animation-delay:-9.49s;animation-duration:10.6s;opacity:0.12">ノ</text>
+    <text x="612" y="130" class="matrix" style="animation-delay:-9.49s;animation-duration:10.6s;opacity:0.11">テ</text>
+    <text x="612" y="145" class="matrix" style="animation-delay:-9.49s;animation-duration:10.6s;opacity:0.10">ネ</text>
+    <text x="612" y="160" class="matrix" style="animation-delay:-9.49s;animation-duration:10.6s;opacity:0.09">ロ</text>
+    <text x="612" y="175" class="matrix" style="animation-delay:-9.49s;animation-duration:10.6s;opacity:0.09">チ</text>
+    <text x="612" y="190" class="matrix" style="animation-delay:-9.49s;animation-duration:10.6s;opacity:0.08">メ</text>
+    <text x="612" y="205" class="matrix" style="animation-delay:-9.49s;animation-duration:10.6s;opacity:0.07">キ</text>
+    <text x="612" y="220" class="matrix" style="animation-delay:-9.49s;animation-duration:10.6s;opacity:0.06">サ</text>
+    <text x="612" y="235" class="matrix" style="animation-delay:-9.49s;animation-duration:10.6s;opacity:0.05">ノ</text>
+    <text x="612" y="250" class="matrix" style="animation-delay:-9.49s;animation-duration:10.6s;opacity:0.05">ル</text>
+    <text x="612" y="265" class="matrix" style="animation-delay:-9.49s;animation-duration:10.6s;opacity:0.04">ヌ</text>
+    <text x="612" y="280" class="matrix" style="animation-delay:-9.49s;animation-duration:10.6s;opacity:0.03">レ</text>
+    <text x="612" y="295" class="matrix" style="animation-delay:-9.49s;animation-duration:10.6s;opacity:0.03">ン</text>
+    <text x="638" y="10" class="matrix" style="animation-delay:-9.03s;animation-duration:8.9s;opacity:0.17">メ</text>
+    <text x="638" y="25" class="matrix" style="animation-delay:-9.03s;animation-duration:8.9s;opacity:0.12">0</text>
+    <text x="638" y="40" class="matrix" style="animation-delay:-9.03s;animation-duration:8.9s;opacity:0.11">ツ</text>
+    <text x="638" y="55" class="matrix" style="animation-delay:-9.03s;animation-duration:8.9s;opacity:0.11">チ</text>
+    <text x="638" y="70" class="matrix" style="animation-delay:-9.03s;animation-duration:8.9s;opacity:0.10">シ</text>
+    <text x="638" y="85" class="matrix" style="animation-delay:-9.03s;animation-duration:8.9s;opacity:0.10">ハ</text>
+    <text x="638" y="100" class="matrix" style="animation-delay:-9.03s;animation-duration:8.9s;opacity:0.09">ヤ</text>
+    <text x="638" y="115" class="matrix" style="animation-delay:-9.03s;animation-duration:8.9s;opacity:0.08">ユ</text>
+    <text x="638" y="130" class="matrix" style="animation-delay:-9.03s;animation-duration:8.9s;opacity:0.08">リ</text>
+    <text x="638" y="145" class="matrix" style="animation-delay:-9.03s;animation-duration:8.9s;opacity:0.07">テ</text>
+    <text x="638" y="160" class="matrix" style="animation-delay:-9.03s;animation-duration:8.9s;opacity:0.07">フ</text>
+    <text x="638" y="175" class="matrix" style="animation-delay:-9.03s;animation-duration:8.9s;opacity:0.06">ヒ</text>
+    <text x="638" y="190" class="matrix" style="animation-delay:-9.03s;animation-duration:8.9s;opacity:0.05">ヒ</text>
+    <text x="638" y="205" class="matrix" style="animation-delay:-9.03s;animation-duration:8.9s;opacity:0.05">レ</text>
+    <text x="638" y="220" class="matrix" style="animation-delay:-9.03s;animation-duration:8.9s;opacity:0.04">シ</text>
+    <text x="638" y="235" class="matrix" style="animation-delay:-9.03s;animation-duration:8.9s;opacity:0.04">マ</text>
+    <text x="638" y="250" class="matrix" style="animation-delay:-9.03s;animation-duration:8.9s;opacity:0.03">ヘ</text>
+    <text x="638" y="265" class="matrix" style="animation-delay:-9.03s;animation-duration:8.9s;opacity:0.03">ン</text>
+    <text x="638" y="280" class="matrix" style="animation-delay:-9.03s;animation-duration:8.9s;opacity:0.02">ケ</text>
+    <text x="638" y="295" class="matrix" style="animation-delay:-9.03s;animation-duration:8.9s;opacity:0.02">ル</text>
+    <text x="664" y="10" class="matrix" style="animation-delay:-0.85s;animation-duration:8.3s;opacity:0.24">ト</text>
+    <text x="664" y="25" class="matrix" style="animation-delay:-0.85s;animation-duration:8.3s;opacity:0.17">エ</text>
+    <text x="664" y="40" class="matrix" style="animation-delay:-0.85s;animation-duration:8.3s;opacity:0.16">セ</text>
+    <text x="664" y="55" class="matrix" style="animation-delay:-0.85s;animation-duration:8.3s;opacity:0.15">レ</text>
+    <text x="664" y="70" class="matrix" style="animation-delay:-0.85s;animation-duration:8.3s;opacity:0.15">ツ</text>
+    <text x="664" y="85" class="matrix" style="animation-delay:-0.85s;animation-duration:8.3s;opacity:0.14">ス</text>
+    <text x="664" y="100" class="matrix" style="animation-delay:-0.85s;animation-duration:8.3s;opacity:0.13">サ</text>
+    <text x="664" y="115" class="matrix" style="animation-delay:-0.85s;animation-duration:8.3s;opacity:0.12">ク</text>
+    <text x="664" y="130" class="matrix" style="animation-delay:-0.85s;animation-duration:8.3s;opacity:0.11">1</text>
+    <text x="664" y="145" class="matrix" style="animation-delay:-0.85s;animation-duration:8.3s;opacity:0.10">ア</text>
+    <text x="664" y="160" class="matrix" style="animation-delay:-0.85s;animation-duration:8.3s;opacity:0.10">セ</text>
+    <text x="664" y="175" class="matrix" style="animation-delay:-0.85s;animation-duration:8.3s;opacity:0.09">ヘ</text>
+    <text x="664" y="190" class="matrix" style="animation-delay:-0.85s;animation-duration:8.3s;opacity:0.08">ヨ</text>
+    <text x="664" y="205" class="matrix" style="animation-delay:-0.85s;animation-duration:8.3s;opacity:0.07">ウ</text>
+    <text x="664" y="220" class="matrix" style="animation-delay:-0.85s;animation-duration:8.3s;opacity:0.06">フ</text>
+    <text x="664" y="235" class="matrix" style="animation-delay:-0.85s;animation-duration:8.3s;opacity:0.05">ノ</text>
+    <text x="664" y="250" class="matrix" style="animation-delay:-0.85s;animation-duration:8.3s;opacity:0.05">ラ</text>
+    <text x="664" y="265" class="matrix" style="animation-delay:-0.85s;animation-duration:8.3s;opacity:0.04">モ</text>
+    <text x="664" y="280" class="matrix" style="animation-delay:-0.85s;animation-duration:8.3s;opacity:0.03">サ</text>
+    <text x="664" y="295" class="matrix" style="animation-delay:-0.85s;animation-duration:8.3s;opacity:0.03">ワ</text>
+    <text x="689" y="10" class="matrix" style="animation-delay:-6.96s;animation-duration:8.2s;opacity:0.15">リ</text>
+    <text x="689" y="25" class="matrix" style="animation-delay:-6.96s;animation-duration:8.2s;opacity:0.11">ロ</text>
+    <text x="689" y="40" class="matrix" style="animation-delay:-6.96s;animation-duration:8.2s;opacity:0.10">0</text>
+    <text x="689" y="55" class="matrix" style="animation-delay:-6.96s;animation-duration:8.2s;opacity:0.10">オ</text>
+    <text x="689" y="70" class="matrix" style="animation-delay:-6.96s;animation-duration:8.2s;opacity:0.09">ハ</text>
+    <text x="689" y="85" class="matrix" style="animation-delay:-6.96s;animation-duration:8.2s;opacity:0.09">ス</text>
+    <text x="689" y="100" class="matrix" style="animation-delay:-6.96s;animation-duration:8.2s;opacity:0.08">コ</text>
+    <text x="689" y="115" class="matrix" style="animation-delay:-6.96s;animation-duration:8.2s;opacity:0.08">ロ</text>
+    <text x="689" y="130" class="matrix" style="animation-delay:-6.96s;animation-duration:8.2s;opacity:0.07">ミ</text>
+    <text x="689" y="145" class="matrix" style="animation-delay:-6.96s;animation-duration:8.2s;opacity:0.07">フ</text>
+    <text x="689" y="160" class="matrix" style="animation-delay:-6.96s;animation-duration:8.2s;opacity:0.06">イ</text>
+    <text x="689" y="175" class="matrix" style="animation-delay:-6.96s;animation-duration:8.2s;opacity:0.06">メ</text>
+    <text x="689" y="190" class="matrix" style="animation-delay:-6.96s;animation-duration:8.2s;opacity:0.05">セ</text>
+    <text x="689" y="205" class="matrix" style="animation-delay:-6.96s;animation-duration:8.2s;opacity:0.05">カ</text>
+    <text x="689" y="220" class="matrix" style="animation-delay:-6.96s;animation-duration:8.2s;opacity:0.04">フ</text>
+    <text x="689" y="235" class="matrix" style="animation-delay:-6.96s;animation-duration:8.2s;opacity:0.03">キ</text>
+    <text x="689" y="250" class="matrix" style="animation-delay:-6.96s;animation-duration:8.2s;opacity:0.03">フ</text>
+    <text x="689" y="265" class="matrix" style="animation-delay:-6.96s;animation-duration:8.2s;opacity:0.02">ル</text>
+    <text x="689" y="280" class="matrix" style="animation-delay:-6.96s;animation-duration:8.2s;opacity:0.02">ミ</text>
+    <text x="689" y="295" class="matrix" style="animation-delay:-6.96s;animation-duration:8.2s;opacity:0.02">メ</text>
+    <text x="715" y="10" class="matrix" style="animation-delay:-5.95s;animation-duration:10.7s;opacity:0.30">ヨ</text>
+    <text x="715" y="25" class="matrix" style="animation-delay:-5.95s;animation-duration:10.7s;opacity:0.21">ヲ</text>
+    <text x="715" y="40" class="matrix" style="animation-delay:-5.95s;animation-duration:10.7s;opacity:0.20">マ</text>
+    <text x="715" y="55" class="matrix" style="animation-delay:-5.95s;animation-duration:10.7s;opacity:0.19">ハ</text>
+    <text x="715" y="70" class="matrix" style="animation-delay:-5.95s;animation-duration:10.7s;opacity:0.18">メ</text>
+    <text x="715" y="85" class="matrix" style="animation-delay:-5.95s;animation-duration:10.7s;opacity:0.17">ヒ</text>
+    <text x="715" y="100" class="matrix" style="animation-delay:-5.95s;animation-duration:10.7s;opacity:0.16">ケ</text>
+    <text x="715" y="115" class="matrix" style="animation-delay:-5.95s;animation-duration:10.7s;opacity:0.15">ン</text>
+    <text x="715" y="130" class="matrix" style="animation-delay:-5.95s;animation-duration:10.7s;opacity:0.14">ヘ</text>
+    <text x="715" y="145" class="matrix" style="animation-delay:-5.95s;animation-duration:10.7s;opacity:0.13">ヒ</text>
+    <text x="715" y="160" class="matrix" style="animation-delay:-5.95s;animation-duration:10.7s;opacity:0.12">ソ</text>
+    <text x="715" y="175" class="matrix" style="animation-delay:-5.95s;animation-duration:10.7s;opacity:0.11">セ</text>
+    <text x="715" y="190" class="matrix" style="animation-delay:-5.95s;animation-duration:10.7s;opacity:0.10">ラ</text>
+    <text x="715" y="205" class="matrix" style="animation-delay:-5.95s;animation-duration:10.7s;opacity:0.09">タ</text>
+    <text x="715" y="220" class="matrix" style="animation-delay:-5.95s;animation-duration:10.7s;opacity:0.08">ミ</text>
+    <text x="715" y="235" class="matrix" style="animation-delay:-5.95s;animation-duration:10.7s;opacity:0.07">ホ</text>
+    <text x="715" y="250" class="matrix" style="animation-delay:-5.95s;animation-duration:10.7s;opacity:0.06">ラ</text>
+    <text x="715" y="265" class="matrix" style="animation-delay:-5.95s;animation-duration:10.7s;opacity:0.05">セ</text>
+    <text x="715" y="280" class="matrix" style="animation-delay:-5.95s;animation-duration:10.7s;opacity:0.04">タ</text>
+    <text x="715" y="295" class="matrix" style="animation-delay:-5.95s;animation-duration:10.7s;opacity:0.04">ヒ</text>
+    <text x="740" y="10" class="matrix" style="animation-delay:-0.77s;animation-duration:7.1s;opacity:0.16">テ</text>
+    <text x="740" y="25" class="matrix" style="animation-delay:-0.77s;animation-duration:7.1s;opacity:0.11">ム</text>
+    <text x="740" y="40" class="matrix" style="animation-delay:-0.77s;animation-duration:7.1s;opacity:0.11">エ</text>
+    <text x="740" y="55" class="matrix" style="animation-delay:-0.77s;animation-duration:7.1s;opacity:0.10">キ</text>
+    <text x="740" y="70" class="matrix" style="animation-delay:-0.77s;animation-duration:7.1s;opacity:0.10">ク</text>
+    <text x="740" y="85" class="matrix" style="animation-delay:-0.77s;animation-duration:7.1s;opacity:0.09">ス</text>
+    <text x="740" y="100" class="matrix" style="animation-delay:-0.77s;animation-duration:7.1s;opacity:0.09">ヌ</text>
+    <text x="740" y="115" class="matrix" style="animation-delay:-0.77s;animation-duration:7.1s;opacity:0.08">ロ</text>
+    <text x="740" y="130" class="matrix" style="animation-delay:-0.77s;animation-duration:7.1s;opacity:0.08">ク</text>
+    <text x="740" y="145" class="matrix" style="animation-delay:-0.77s;animation-duration:7.1s;opacity:0.07">ワ</text>
+    <text x="740" y="160" class="matrix" style="animation-delay:-0.77s;animation-duration:7.1s;opacity:0.06">シ</text>
+    <text x="740" y="175" class="matrix" style="animation-delay:-0.77s;animation-duration:7.1s;opacity:0.06">ウ</text>
+    <text x="740" y="190" class="matrix" style="animation-delay:-0.77s;animation-duration:7.1s;opacity:0.05">ノ</text>
+    <text x="740" y="205" class="matrix" style="animation-delay:-0.77s;animation-duration:7.1s;opacity:0.05">ノ</text>
+    <text x="740" y="220" class="matrix" style="animation-delay:-0.77s;animation-duration:7.1s;opacity:0.04">ト</text>
+    <text x="740" y="235" class="matrix" style="animation-delay:-0.77s;animation-duration:7.1s;opacity:0.04">ム</text>
+    <text x="740" y="250" class="matrix" style="animation-delay:-0.77s;animation-duration:7.1s;opacity:0.03">フ</text>
+    <text x="740" y="265" class="matrix" style="animation-delay:-0.77s;animation-duration:7.1s;opacity:0.02">ノ</text>
+    <text x="740" y="280" class="matrix" style="animation-delay:-0.77s;animation-duration:7.1s;opacity:0.02">イ</text>
+    <text x="740" y="295" class="matrix" style="animation-delay:-0.77s;animation-duration:7.1s;opacity:0.02">シ</text>
+    <text x="766" y="10" class="matrix" style="animation-delay:-8.33s;animation-duration:7.6s;opacity:0.27">ロ</text>
+    <text x="766" y="25" class="matrix" style="animation-delay:-8.33s;animation-duration:7.6s;opacity:0.19">1</text>
+    <text x="766" y="40" class="matrix" style="animation-delay:-8.33s;animation-duration:7.6s;opacity:0.18">モ</text>
+    <text x="766" y="55" class="matrix" style="animation-delay:-8.33s;animation-duration:7.6s;opacity:0.17">ヌ</text>
+    <text x="766" y="70" class="matrix" style="animation-delay:-8.33s;animation-duration:7.6s;opacity:0.16">ヘ</text>
+    <text x="766" y="85" class="matrix" style="animation-delay:-8.33s;animation-duration:7.6s;opacity:0.15">0</text>
+    <text x="766" y="100" class="matrix" style="animation-delay:-8.33s;animation-duration:7.6s;opacity:0.15">ナ</text>
+    <text x="766" y="115" class="matrix" style="animation-delay:-8.33s;animation-duration:7.6s;opacity:0.14">ツ</text>
+    <text x="766" y="130" class="matrix" style="animation-delay:-8.33s;animation-duration:7.6s;opacity:0.13">ヌ</text>
+    <text x="766" y="145" class="matrix" style="animation-delay:-8.33s;animation-duration:7.6s;opacity:0.12">ノ</text>
+    <text x="766" y="160" class="matrix" style="animation-delay:-8.33s;animation-duration:7.6s;opacity:0.11">ム</text>
+    <text x="766" y="175" class="matrix" style="animation-delay:-8.33s;animation-duration:7.6s;opacity:0.10">ン</text>
+    <text x="766" y="190" class="matrix" style="animation-delay:-8.33s;animation-duration:7.6s;opacity:0.09">ン</text>
+    <text x="766" y="205" class="matrix" style="animation-delay:-8.33s;animation-duration:7.6s;opacity:0.08">ム</text>
+    <text x="766" y="220" class="matrix" style="animation-delay:-8.33s;animation-duration:7.6s;opacity:0.07">ユ</text>
+    <text x="766" y="235" class="matrix" style="animation-delay:-8.33s;animation-duration:7.6s;opacity:0.06">ス</text>
+    <text x="766" y="250" class="matrix" style="animation-delay:-8.33s;animation-duration:7.6s;opacity:0.05">ホ</text>
+    <text x="766" y="265" class="matrix" style="animation-delay:-8.33s;animation-duration:7.6s;opacity:0.04">ス</text>
+    <text x="766" y="280" class="matrix" style="animation-delay:-8.33s;animation-duration:7.6s;opacity:0.03">タ</text>
+    <text x="766" y="295" class="matrix" style="animation-delay:-8.33s;animation-duration:7.6s;opacity:0.03">ハ</text>
+    <text x="792" y="10" class="matrix" style="animation-delay:-4.86s;animation-duration:7.6s;opacity:0.25">ネ</text>
+    <text x="792" y="25" class="matrix" style="animation-delay:-4.86s;animation-duration:7.6s;opacity:0.18">ヲ</text>
+    <text x="792" y="40" class="matrix" style="animation-delay:-4.86s;animation-duration:7.6s;opacity:0.17">ケ</text>
+    <text x="792" y="55" class="matrix" style="animation-delay:-4.86s;animation-duration:7.6s;opacity:0.16">フ</text>
+    <text x="792" y="70" class="matrix" style="animation-delay:-4.86s;animation-duration:7.6s;opacity:0.15">キ</text>
+    <text x="792" y="85" class="matrix" style="animation-delay:-4.86s;animation-duration:7.6s;opacity:0.14">ヨ</text>
+    <text x="792" y="100" class="matrix" style="animation-delay:-4.86s;animation-duration:7.6s;opacity:0.13">ム</text>
+    <text x="792" y="115" class="matrix" style="animation-delay:-4.86s;animation-duration:7.6s;opacity:0.12">1</text>
+    <text x="792" y="130" class="matrix" style="animation-delay:-4.86s;animation-duration:7.6s;opacity:0.12">ネ</text>
+    <text x="792" y="145" class="matrix" style="animation-delay:-4.86s;animation-duration:7.6s;opacity:0.11">ヤ</text>
+    <text x="792" y="160" class="matrix" style="animation-delay:-4.86s;animation-duration:7.6s;opacity:0.10">モ</text>
+    <text x="792" y="175" class="matrix" style="animation-delay:-4.86s;animation-duration:7.6s;opacity:0.09">ル</text>
+    <text x="792" y="190" class="matrix" style="animation-delay:-4.86s;animation-duration:7.6s;opacity:0.08">1</text>
+    <text x="792" y="205" class="matrix" style="animation-delay:-4.86s;animation-duration:7.6s;opacity:0.07">エ</text>
+    <text x="792" y="220" class="matrix" style="animation-delay:-4.86s;animation-duration:7.6s;opacity:0.06">リ</text>
+    <text x="792" y="235" class="matrix" style="animation-delay:-4.86s;animation-duration:7.6s;opacity:0.06">ハ</text>
+    <text x="792" y="250" class="matrix" style="animation-delay:-4.86s;animation-duration:7.6s;opacity:0.05">キ</text>
+    <text x="792" y="265" class="matrix" style="animation-delay:-4.86s;animation-duration:7.6s;opacity:0.04">フ</text>
+    <text x="792" y="280" class="matrix" style="animation-delay:-4.86s;animation-duration:7.6s;opacity:0.03">コ</text>
+    <text x="792" y="295" class="matrix" style="animation-delay:-4.86s;animation-duration:7.6s;opacity:0.03">イ</text>
+    <text x="817" y="10" class="matrix" style="animation-delay:-2.60s;animation-duration:7.3s;opacity:0.20">ト</text>
+    <text x="817" y="25" class="matrix" style="animation-delay:-2.60s;animation-duration:7.3s;opacity:0.14">ヌ</text>
+    <text x="817" y="40" class="matrix" style="animation-delay:-2.60s;animation-duration:7.3s;opacity:0.14">タ</text>
+    <text x="817" y="55" class="matrix" style="animation-delay:-2.60s;animation-duration:7.3s;opacity:0.13">ノ</text>
+    <text x="817" y="70" class="matrix" style="animation-delay:-2.60s;animation-duration:7.3s;opacity:0.12">ソ</text>
+    <text x="817" y="85" class="matrix" style="animation-delay:-2.60s;animation-duration:7.3s;opacity:0.12">エ</text>
+    <text x="817" y="100" class="matrix" style="animation-delay:-2.60s;animation-duration:7.3s;opacity:0.11">ヘ</text>
+    <text x="817" y="115" class="matrix" style="animation-delay:-2.60s;animation-duration:7.3s;opacity:0.10">1</text>
+    <text x="817" y="130" class="matrix" style="animation-delay:-2.60s;animation-duration:7.3s;opacity:0.09">ン</text>
+    <text x="817" y="145" class="matrix" style="animation-delay:-2.60s;animation-duration:7.3s;opacity:0.09">ム</text>
+    <text x="817" y="160" class="matrix" style="animation-delay:-2.60s;animation-duration:7.3s;opacity:0.08">イ</text>
+    <text x="817" y="175" class="matrix" style="animation-delay:-2.60s;animation-duration:7.3s;opacity:0.07">ナ</text>
+    <text x="817" y="190" class="matrix" style="animation-delay:-2.60s;animation-duration:7.3s;opacity:0.07">ス</text>
+    <text x="817" y="205" class="matrix" style="animation-delay:-2.60s;animation-duration:7.3s;opacity:0.06">リ</text>
+    <text x="817" y="220" class="matrix" style="animation-delay:-2.60s;animation-duration:7.3s;opacity:0.05">ウ</text>
+    <text x="817" y="235" class="matrix" style="animation-delay:-2.60s;animation-duration:7.3s;opacity:0.05">リ</text>
+    <text x="817" y="250" class="matrix" style="animation-delay:-2.60s;animation-duration:7.3s;opacity:0.04">ア</text>
+    <text x="817" y="265" class="matrix" style="animation-delay:-2.60s;animation-duration:7.3s;opacity:0.03">1</text>
+    <text x="817" y="280" class="matrix" style="animation-delay:-2.60s;animation-duration:7.3s;opacity:0.02">セ</text>
+    <text x="817" y="295" class="matrix" style="animation-delay:-2.60s;animation-duration:7.3s;opacity:0.02">サ</text>
+    <text x="843" y="10" class="matrix" style="animation-delay:-8.39s;animation-duration:8.9s;opacity:0.15">ヘ</text>
+    <text x="843" y="25" class="matrix" style="animation-delay:-8.39s;animation-duration:8.9s;opacity:0.11">ル</text>
+    <text x="843" y="40" class="matrix" style="animation-delay:-8.39s;animation-duration:8.9s;opacity:0.10">カ</text>
+    <text x="843" y="55" class="matrix" style="animation-delay:-8.39s;animation-duration:8.9s;opacity:0.10">モ</text>
+    <text x="843" y="70" class="matrix" style="animation-delay:-8.39s;animation-duration:8.9s;opacity:0.09">シ</text>
+    <text x="843" y="85" class="matrix" style="animation-delay:-8.39s;animation-duration:8.9s;opacity:0.09">フ</text>
+    <text x="843" y="100" class="matrix" style="animation-delay:-8.39s;animation-duration:8.9s;opacity:0.08">ロ</text>
+    <text x="843" y="115" class="matrix" style="animation-delay:-8.39s;animation-duration:8.9s;opacity:0.08">ソ</text>
+    <text x="843" y="130" class="matrix" style="animation-delay:-8.39s;animation-duration:8.9s;opacity:0.07">ニ</text>
+    <text x="843" y="145" class="matrix" style="animation-delay:-8.39s;animation-duration:8.9s;opacity:0.07">ケ</text>
+    <text x="843" y="160" class="matrix" style="animation-delay:-8.39s;animation-duration:8.9s;opacity:0.06">ユ</text>
+    <text x="843" y="175" class="matrix" style="animation-delay:-8.39s;animation-duration:8.9s;opacity:0.06">ユ</text>
+    <text x="843" y="190" class="matrix" style="animation-delay:-8.39s;animation-duration:8.9s;opacity:0.05">ン</text>
+    <text x="843" y="205" class="matrix" style="animation-delay:-8.39s;animation-duration:8.9s;opacity:0.04">ワ</text>
+    <text x="843" y="220" class="matrix" style="animation-delay:-8.39s;animation-duration:8.9s;opacity:0.04">カ</text>
+    <text x="843" y="235" class="matrix" style="animation-delay:-8.39s;animation-duration:8.9s;opacity:0.03">ケ</text>
+    <text x="843" y="250" class="matrix" style="animation-delay:-8.39s;animation-duration:8.9s;opacity:0.03">ツ</text>
+    <text x="843" y="265" class="matrix" style="animation-delay:-8.39s;animation-duration:8.9s;opacity:0.02">オ</text>
+    <text x="843" y="280" class="matrix" style="animation-delay:-8.39s;animation-duration:8.9s;opacity:0.02">ヤ</text>
+    <text x="843" y="295" class="matrix" style="animation-delay:-8.39s;animation-duration:8.9s;opacity:0.02">1</text>
+    <text x="868" y="10" class="matrix" style="animation-delay:-9.29s;animation-duration:8.7s;opacity:0.30">ヌ</text>
+    <text x="868" y="25" class="matrix" style="animation-delay:-9.29s;animation-duration:8.7s;opacity:0.21">ネ</text>
+    <text x="868" y="40" class="matrix" style="animation-delay:-9.29s;animation-duration:8.7s;opacity:0.20">ワ</text>
+    <text x="868" y="55" class="matrix" style="animation-delay:-9.29s;animation-duration:8.7s;opacity:0.19">サ</text>
+    <text x="868" y="70" class="matrix" style="animation-delay:-9.29s;animation-duration:8.7s;opacity:0.18">ウ</text>
+    <text x="868" y="85" class="matrix" style="animation-delay:-9.29s;animation-duration:8.7s;opacity:0.17">ヤ</text>
+    <text x="868" y="100" class="matrix" style="animation-delay:-9.29s;animation-duration:8.7s;opacity:0.16">ロ</text>
+    <text x="868" y="115" class="matrix" style="animation-delay:-9.29s;animation-duration:8.7s;opacity:0.15">ラ</text>
+    <text x="868" y="130" class="matrix" style="animation-delay:-9.29s;animation-duration:8.7s;opacity:0.14">セ</text>
+    <text x="868" y="145" class="matrix" style="animation-delay:-9.29s;animation-duration:8.7s;opacity:0.13">オ</text>
+    <text x="868" y="160" class="matrix" style="animation-delay:-9.29s;animation-duration:8.7s;opacity:0.12">ロ</text>
+    <text x="868" y="175" class="matrix" style="animation-delay:-9.29s;animation-duration:8.7s;opacity:0.11">ツ</text>
+    <text x="868" y="190" class="matrix" style="animation-delay:-9.29s;animation-duration:8.7s;opacity:0.10">レ</text>
+    <text x="868" y="205" class="matrix" style="animation-delay:-9.29s;animation-duration:8.7s;opacity:0.09">ユ</text>
+    <text x="868" y="220" class="matrix" style="animation-delay:-9.29s;animation-duration:8.7s;opacity:0.08">カ</text>
+    <text x="868" y="235" class="matrix" style="animation-delay:-9.29s;animation-duration:8.7s;opacity:0.07">モ</text>
+    <text x="868" y="250" class="matrix" style="animation-delay:-9.29s;animation-duration:8.7s;opacity:0.06">ア</text>
+    <text x="868" y="265" class="matrix" style="animation-delay:-9.29s;animation-duration:8.7s;opacity:0.05">ナ</text>
+    <text x="868" y="280" class="matrix" style="animation-delay:-9.29s;animation-duration:8.7s;opacity:0.04">ム</text>
+    <text x="868" y="295" class="matrix" style="animation-delay:-9.29s;animation-duration:8.7s;opacity:0.04">ハ</text>
+    <text x="894" y="10" class="matrix" style="animation-delay:-6.62s;animation-duration:5.9s;opacity:0.24">0</text>
+    <text x="894" y="25" class="matrix" style="animation-delay:-6.62s;animation-duration:5.9s;opacity:0.17">ノ</text>
+    <text x="894" y="40" class="matrix" style="animation-delay:-6.62s;animation-duration:5.9s;opacity:0.16">ホ</text>
+    <text x="894" y="55" class="matrix" style="animation-delay:-6.62s;animation-duration:5.9s;opacity:0.16">オ</text>
+    <text x="894" y="70" class="matrix" style="animation-delay:-6.62s;animation-duration:5.9s;opacity:0.15">ハ</text>
+    <text x="894" y="85" class="matrix" style="animation-delay:-6.62s;animation-duration:5.9s;opacity:0.14">ニ</text>
+    <text x="894" y="100" class="matrix" style="animation-delay:-6.62s;animation-duration:5.9s;opacity:0.13">ラ</text>
+    <text x="894" y="115" class="matrix" style="animation-delay:-6.62s;animation-duration:5.9s;opacity:0.12">フ</text>
+    <text x="894" y="130" class="matrix" style="animation-delay:-6.62s;animation-duration:5.9s;opacity:0.11">ワ</text>
+    <text x="894" y="145" class="matrix" style="animation-delay:-6.62s;animation-duration:5.9s;opacity:0.11">ク</text>
+    <text x="894" y="160" class="matrix" style="animation-delay:-6.62s;animation-duration:5.9s;opacity:0.10">ハ</text>
+    <text x="894" y="175" class="matrix" style="animation-delay:-6.62s;animation-duration:5.9s;opacity:0.09">コ</text>
+    <text x="894" y="190" class="matrix" style="animation-delay:-6.62s;animation-duration:5.9s;opacity:0.08">ヲ</text>
+    <text x="894" y="205" class="matrix" style="animation-delay:-6.62s;animation-duration:5.9s;opacity:0.07">ミ</text>
+    <text x="894" y="220" class="matrix" style="animation-delay:-6.62s;animation-duration:5.9s;opacity:0.06">リ</text>
+    <text x="894" y="235" class="matrix" style="animation-delay:-6.62s;animation-duration:5.9s;opacity:0.05">タ</text>
+    <text x="894" y="250" class="matrix" style="animation-delay:-6.62s;animation-duration:5.9s;opacity:0.05">ヨ</text>
+    <text x="894" y="265" class="matrix" style="animation-delay:-6.62s;animation-duration:5.9s;opacity:0.04">ム</text>
+    <text x="894" y="280" class="matrix" style="animation-delay:-6.62s;animation-duration:5.9s;opacity:0.03">ヘ</text>
+    <text x="894" y="295" class="matrix" style="animation-delay:-6.62s;animation-duration:5.9s;opacity:0.03">フ</text>
+    <text x="920" y="10" class="matrix" style="animation-delay:-4.36s;animation-duration:9.5s;opacity:0.16">セ</text>
+    <text x="920" y="25" class="matrix" style="animation-delay:-4.36s;animation-duration:9.5s;opacity:0.11">エ</text>
+    <text x="920" y="40" class="matrix" style="animation-delay:-4.36s;animation-duration:9.5s;opacity:0.11">タ</text>
+    <text x="920" y="55" class="matrix" style="animation-delay:-4.36s;animation-duration:9.5s;opacity:0.10">ヒ</text>
+    <text x="920" y="70" class="matrix" style="animation-delay:-4.36s;animation-duration:9.5s;opacity:0.10">セ</text>
+    <text x="920" y="85" class="matrix" style="animation-delay:-4.36s;animation-duration:9.5s;opacity:0.09">フ</text>
+    <text x="920" y="100" class="matrix" style="animation-delay:-4.36s;animation-duration:9.5s;opacity:0.09">モ</text>
+    <text x="920" y="115" class="matrix" style="animation-delay:-4.36s;animation-duration:9.5s;opacity:0.08">ヨ</text>
+    <text x="920" y="130" class="matrix" style="animation-delay:-4.36s;animation-duration:9.5s;opacity:0.07">ル</text>
+    <text x="920" y="145" class="matrix" style="animation-delay:-4.36s;animation-duration:9.5s;opacity:0.07">ヌ</text>
+    <text x="920" y="160" class="matrix" style="animation-delay:-4.36s;animation-duration:9.5s;opacity:0.06">ト</text>
+    <text x="920" y="175" class="matrix" style="animation-delay:-4.36s;animation-duration:9.5s;opacity:0.06">1</text>
+    <text x="920" y="190" class="matrix" style="animation-delay:-4.36s;animation-duration:9.5s;opacity:0.05">ホ</text>
+    <text x="920" y="205" class="matrix" style="animation-delay:-4.36s;animation-duration:9.5s;opacity:0.05">テ</text>
+    <text x="920" y="220" class="matrix" style="animation-delay:-4.36s;animation-duration:9.5s;opacity:0.04">コ</text>
+    <text x="920" y="235" class="matrix" style="animation-delay:-4.36s;animation-duration:9.5s;opacity:0.04">ホ</text>
+    <text x="920" y="250" class="matrix" style="animation-delay:-4.36s;animation-duration:9.5s;opacity:0.03">シ</text>
+    <text x="920" y="265" class="matrix" style="animation-delay:-4.36s;animation-duration:9.5s;opacity:0.02">ナ</text>
+    <text x="920" y="280" class="matrix" style="animation-delay:-4.36s;animation-duration:9.5s;opacity:0.02">ソ</text>
+    <text x="920" y="295" class="matrix" style="animation-delay:-4.36s;animation-duration:9.5s;opacity:0.02">ト</text>
+    <text x="945" y="10" class="matrix" style="animation-delay:-2.80s;animation-duration:8.8s;opacity:0.29">メ</text>
+    <text x="945" y="25" class="matrix" style="animation-delay:-2.80s;animation-duration:8.8s;opacity:0.21">0</text>
+    <text x="945" y="40" class="matrix" style="animation-delay:-2.80s;animation-duration:8.8s;opacity:0.20">ミ</text>
+    <text x="945" y="55" class="matrix" style="animation-delay:-2.80s;animation-duration:8.8s;opacity:0.19">サ</text>
+    <text x="945" y="70" class="matrix" style="animation-delay:-2.80s;animation-duration:8.8s;opacity:0.18">エ</text>
+    <text x="945" y="85" class="matrix" style="animation-delay:-2.80s;animation-duration:8.8s;opacity:0.17">セ</text>
+    <text x="945" y="100" class="matrix" style="animation-delay:-2.80s;animation-duration:8.8s;opacity:0.16">ヲ</text>
+    <text x="945" y="115" class="matrix" style="animation-delay:-2.80s;animation-duration:8.8s;opacity:0.15">ノ</text>
+    <text x="945" y="130" class="matrix" style="animation-delay:-2.80s;animation-duration:8.8s;opacity:0.14">ホ</text>
+    <text x="945" y="145" class="matrix" style="animation-delay:-2.80s;animation-duration:8.8s;opacity:0.13">メ</text>
+    <text x="945" y="160" class="matrix" style="animation-delay:-2.80s;animation-duration:8.8s;opacity:0.12">セ</text>
+    <text x="945" y="175" class="matrix" style="animation-delay:-2.80s;animation-duration:8.8s;opacity:0.11">ロ</text>
+    <text x="945" y="190" class="matrix" style="animation-delay:-2.80s;animation-duration:8.8s;opacity:0.10">ヘ</text>
+    <text x="945" y="205" class="matrix" style="animation-delay:-2.80s;animation-duration:8.8s;opacity:0.09">リ</text>
+    <text x="945" y="220" class="matrix" style="animation-delay:-2.80s;animation-duration:8.8s;opacity:0.08">ワ</text>
+    <text x="945" y="235" class="matrix" style="animation-delay:-2.80s;animation-duration:8.8s;opacity:0.07">ホ</text>
+    <text x="945" y="250" class="matrix" style="animation-delay:-2.80s;animation-duration:8.8s;opacity:0.06">ヒ</text>
+    <text x="945" y="265" class="matrix" style="animation-delay:-2.80s;animation-duration:8.8s;opacity:0.05">1</text>
+    <text x="945" y="280" class="matrix" style="animation-delay:-2.80s;animation-duration:8.8s;opacity:0.04">エ</text>
+    <text x="945" y="295" class="matrix" style="animation-delay:-2.80s;animation-duration:8.8s;opacity:0.04">チ</text>
+    <text x="971" y="10" class="matrix" style="animation-delay:-2.22s;animation-duration:9.3s;opacity:0.17">ヤ</text>
+    <text x="971" y="25" class="matrix" style="animation-delay:-2.22s;animation-duration:9.3s;opacity:0.12">ニ</text>
+    <text x="971" y="40" class="matrix" style="animation-delay:-2.22s;animation-duration:9.3s;opacity:0.11">ヘ</text>
+    <text x="971" y="55" class="matrix" style="animation-delay:-2.22s;animation-duration:9.3s;opacity:0.11">メ</text>
+    <text x="971" y="70" class="matrix" style="animation-delay:-2.22s;animation-duration:9.3s;opacity:0.10">ミ</text>
+    <text x="971" y="85" class="matrix" style="animation-delay:-2.22s;animation-duration:9.3s;opacity:0.10">ナ</text>
+    <text x="971" y="100" class="matrix" style="animation-delay:-2.22s;animation-duration:9.3s;opacity:0.09">ハ</text>
+    <text x="971" y="115" class="matrix" style="animation-delay:-2.22s;animation-duration:9.3s;opacity:0.08">ン</text>
+    <text x="971" y="130" class="matrix" style="animation-delay:-2.22s;animation-duration:9.3s;opacity:0.08">メ</text>
+    <text x="971" y="145" class="matrix" style="animation-delay:-2.22s;animation-duration:9.3s;opacity:0.07">ト</text>
+    <text x="971" y="160" class="matrix" style="animation-delay:-2.22s;animation-duration:9.3s;opacity:0.07">ナ</text>
+    <text x="971" y="175" class="matrix" style="animation-delay:-2.22s;animation-duration:9.3s;opacity:0.06">ロ</text>
+    <text x="971" y="190" class="matrix" style="animation-delay:-2.22s;animation-duration:9.3s;opacity:0.06">フ</text>
+    <text x="971" y="205" class="matrix" style="animation-delay:-2.22s;animation-duration:9.3s;opacity:0.05">タ</text>
+    <text x="971" y="220" class="matrix" style="animation-delay:-2.22s;animation-duration:9.3s;opacity:0.04">ツ</text>
+    <text x="971" y="235" class="matrix" style="animation-delay:-2.22s;animation-duration:9.3s;opacity:0.04">ソ</text>
+    <text x="971" y="250" class="matrix" style="animation-delay:-2.22s;animation-duration:9.3s;opacity:0.03">ス</text>
+    <text x="971" y="265" class="matrix" style="animation-delay:-2.22s;animation-duration:9.3s;opacity:0.03">カ</text>
+    <text x="971" y="280" class="matrix" style="animation-delay:-2.22s;animation-duration:9.3s;opacity:0.02">ヲ</text>
+    <text x="971" y="295" class="matrix" style="animation-delay:-2.22s;animation-duration:9.3s;opacity:0.02">サ</text>
+    <text x="996" y="10" class="matrix" style="animation-delay:-3.16s;animation-duration:9.6s;opacity:0.31">ロ</text>
+    <text x="996" y="25" class="matrix" style="animation-delay:-3.16s;animation-duration:9.6s;opacity:0.22">コ</text>
+    <text x="996" y="40" class="matrix" style="animation-delay:-3.16s;animation-duration:9.6s;opacity:0.21">サ</text>
+    <text x="996" y="55" class="matrix" style="animation-delay:-3.16s;animation-duration:9.6s;opacity:0.20">シ</text>
+    <text x="996" y="70" class="matrix" style="animation-delay:-3.16s;animation-duration:9.6s;opacity:0.19">ン</text>
+    <text x="996" y="85" class="matrix" style="animation-delay:-3.16s;animation-duration:9.6s;opacity:0.18">ヘ</text>
+    <text x="996" y="100" class="matrix" style="animation-delay:-3.16s;animation-duration:9.6s;opacity:0.17">タ</text>
+    <text x="996" y="115" class="matrix" style="animation-delay:-3.16s;animation-duration:9.6s;opacity:0.16">ヲ</text>
+    <text x="996" y="130" class="matrix" style="animation-delay:-3.16s;animation-duration:9.6s;opacity:0.15">ヤ</text>
+    <text x="996" y="145" class="matrix" style="animation-delay:-3.16s;animation-duration:9.6s;opacity:0.13">ミ</text>
+    <text x="996" y="160" class="matrix" style="animation-delay:-3.16s;animation-duration:9.6s;opacity:0.12">ユ</text>
+    <text x="996" y="175" class="matrix" style="animation-delay:-3.16s;animation-duration:9.6s;opacity:0.11">チ</text>
+    <text x="996" y="190" class="matrix" style="animation-delay:-3.16s;animation-duration:9.6s;opacity:0.10">オ</text>
+    <text x="996" y="205" class="matrix" style="animation-delay:-3.16s;animation-duration:9.6s;opacity:0.09">サ</text>
+    <text x="996" y="220" class="matrix" style="animation-delay:-3.16s;animation-duration:9.6s;opacity:0.08">チ</text>
+    <text x="996" y="235" class="matrix" style="animation-delay:-3.16s;animation-duration:9.6s;opacity:0.07">ス</text>
+    <text x="996" y="250" class="matrix" style="animation-delay:-3.16s;animation-duration:9.6s;opacity:0.06">ニ</text>
+    <text x="996" y="265" class="matrix" style="animation-delay:-3.16s;animation-duration:9.6s;opacity:0.05">コ</text>
+    <text x="996" y="280" class="matrix" style="animation-delay:-3.16s;animation-duration:9.6s;opacity:0.04">ツ</text>
+    <text x="996" y="295" class="matrix" style="animation-delay:-3.16s;animation-duration:9.6s;opacity:0.04">0</text>
+    <text x="1022" y="10" class="matrix" style="animation-delay:-7.08s;animation-duration:6.2s;opacity:0.11">イ</text>
+    <text x="1022" y="25" class="matrix" style="animation-delay:-7.08s;animation-duration:6.2s;opacity:0.08">メ</text>
+    <text x="1022" y="40" class="matrix" style="animation-delay:-7.08s;animation-duration:6.2s;opacity:0.07">チ</text>
+    <text x="1022" y="55" class="matrix" style="animation-delay:-7.08s;animation-duration:6.2s;opacity:0.07">ロ</text>
+    <text x="1022" y="70" class="matrix" style="animation-delay:-7.08s;animation-duration:6.2s;opacity:0.07">キ</text>
+    <text x="1022" y="85" class="matrix" style="animation-delay:-7.08s;animation-duration:6.2s;opacity:0.06">ラ</text>
+    <text x="1022" y="100" class="matrix" style="animation-delay:-7.08s;animation-duration:6.2s;opacity:0.06">ホ</text>
+    <text x="1022" y="115" class="matrix" style="animation-delay:-7.08s;animation-duration:6.2s;opacity:0.06">オ</text>
+    <text x="1022" y="130" class="matrix" style="animation-delay:-7.08s;animation-duration:6.2s;opacity:0.05">0</text>
+    <text x="1022" y="145" class="matrix" style="animation-delay:-7.08s;animation-duration:6.2s;opacity:0.05">モ</text>
+    <text x="1022" y="160" class="matrix" style="animation-delay:-7.08s;animation-duration:6.2s;opacity:0.04">チ</text>
+    <text x="1022" y="175" class="matrix" style="animation-delay:-7.08s;animation-duration:6.2s;opacity:0.04">ヘ</text>
+    <text x="1022" y="190" class="matrix" style="animation-delay:-7.08s;animation-duration:6.2s;opacity:0.04">ヘ</text>
+    <text x="1022" y="205" class="matrix" style="animation-delay:-7.08s;animation-duration:6.2s;opacity:0.03">ヒ</text>
+    <text x="1022" y="220" class="matrix" style="animation-delay:-7.08s;animation-duration:6.2s;opacity:0.03">ト</text>
+    <text x="1022" y="235" class="matrix" style="animation-delay:-7.08s;animation-duration:6.2s;opacity:0.02">コ</text>
+    <text x="1022" y="250" class="matrix" style="animation-delay:-7.08s;animation-duration:6.2s;opacity:0.02">イ</text>
+    <text x="1022" y="265" class="matrix" style="animation-delay:-7.08s;animation-duration:6.2s;opacity:0.02">ソ</text>
+    <text x="1022" y="280" class="matrix" style="animation-delay:-7.08s;animation-duration:6.2s;opacity:0.01">ヘ</text>
+    <text x="1022" y="295" class="matrix" style="animation-delay:-7.08s;animation-duration:6.2s;opacity:0.01">カ</text>
+    <text x="1048" y="10" class="matrix" style="animation-delay:-8.22s;animation-duration:7.7s;opacity:0.12">ラ</text>
+    <text x="1048" y="25" class="matrix" style="animation-delay:-8.22s;animation-duration:7.7s;opacity:0.08">レ</text>
+    <text x="1048" y="40" class="matrix" style="animation-delay:-8.22s;animation-duration:7.7s;opacity:0.08">イ</text>
+    <text x="1048" y="55" class="matrix" style="animation-delay:-8.22s;animation-duration:7.7s;opacity:0.08">ク</text>
+    <text x="1048" y="70" class="matrix" style="animation-delay:-8.22s;animation-duration:7.7s;opacity:0.07">ク</text>
+    <text x="1048" y="85" class="matrix" style="animation-delay:-8.22s;animation-duration:7.7s;opacity:0.07">モ</text>
+    <text x="1048" y="100" class="matrix" style="animation-delay:-8.22s;animation-duration:7.7s;opacity:0.06">ツ</text>
+    <text x="1048" y="115" class="matrix" style="animation-delay:-8.22s;animation-duration:7.7s;opacity:0.06">エ</text>
+    <text x="1048" y="130" class="matrix" style="animation-delay:-8.22s;animation-duration:7.7s;opacity:0.05">セ</text>
+    <text x="1048" y="145" class="matrix" style="animation-delay:-8.22s;animation-duration:7.7s;opacity:0.05">カ</text>
+    <text x="1048" y="160" class="matrix" style="animation-delay:-8.22s;animation-duration:7.7s;opacity:0.05">メ</text>
+    <text x="1048" y="175" class="matrix" style="animation-delay:-8.22s;animation-duration:7.7s;opacity:0.04">ノ</text>
+    <text x="1048" y="190" class="matrix" style="animation-delay:-8.22s;animation-duration:7.7s;opacity:0.04">ユ</text>
+    <text x="1048" y="205" class="matrix" style="animation-delay:-8.22s;animation-duration:7.7s;opacity:0.03">ユ</text>
+    <text x="1048" y="220" class="matrix" style="animation-delay:-8.22s;animation-duration:7.7s;opacity:0.03">ヨ</text>
+    <text x="1048" y="235" class="matrix" style="animation-delay:-8.22s;animation-duration:7.7s;opacity:0.03">ス</text>
+    <text x="1048" y="250" class="matrix" style="animation-delay:-8.22s;animation-duration:7.7s;opacity:0.02">ミ</text>
+    <text x="1048" y="265" class="matrix" style="animation-delay:-8.22s;animation-duration:7.7s;opacity:0.02">ヌ</text>
+    <text x="1048" y="280" class="matrix" style="animation-delay:-8.22s;animation-duration:7.7s;opacity:0.01">ヒ</text>
+    <text x="1048" y="295" class="matrix" style="animation-delay:-8.22s;animation-duration:7.7s;opacity:0.01">ヒ</text>
+    <text x="1073" y="10" class="matrix" style="animation-delay:-2.97s;animation-duration:8.7s;opacity:0.19">モ</text>
+    <text x="1073" y="25" class="matrix" style="animation-delay:-2.97s;animation-duration:8.7s;opacity:0.14">ヨ</text>
+    <text x="1073" y="40" class="matrix" style="animation-delay:-2.97s;animation-duration:8.7s;opacity:0.13">イ</text>
+    <text x="1073" y="55" class="matrix" style="animation-delay:-2.97s;animation-duration:8.7s;opacity:0.13">ヨ</text>
+    <text x="1073" y="70" class="matrix" style="animation-delay:-2.97s;animation-duration:8.7s;opacity:0.12">ン</text>
+    <text x="1073" y="85" class="matrix" style="animation-delay:-2.97s;animation-duration:8.7s;opacity:0.11">オ</text>
+    <text x="1073" y="100" class="matrix" style="animation-delay:-2.97s;animation-duration:8.7s;opacity:0.10">シ</text>
+    <text x="1073" y="115" class="matrix" style="animation-delay:-2.97s;animation-duration:8.7s;opacity:0.10">ラ</text>
+    <text x="1073" y="130" class="matrix" style="animation-delay:-2.97s;animation-duration:8.7s;opacity:0.09">シ</text>
+    <text x="1073" y="145" class="matrix" style="animation-delay:-2.97s;animation-duration:8.7s;opacity:0.08">ソ</text>
+    <text x="1073" y="160" class="matrix" style="animation-delay:-2.97s;animation-duration:8.7s;opacity:0.08">ル</text>
+    <text x="1073" y="175" class="matrix" style="animation-delay:-2.97s;animation-duration:8.7s;opacity:0.07">エ</text>
+    <text x="1073" y="190" class="matrix" style="animation-delay:-2.97s;animation-duration:8.7s;opacity:0.06">ケ</text>
+    <text x="1073" y="205" class="matrix" style="animation-delay:-2.97s;animation-duration:8.7s;opacity:0.06">セ</text>
+    <text x="1073" y="220" class="matrix" style="animation-delay:-2.97s;animation-duration:8.7s;opacity:0.05">コ</text>
+    <text x="1073" y="235" class="matrix" style="animation-delay:-2.97s;animation-duration:8.7s;opacity:0.04">メ</text>
+    <text x="1073" y="250" class="matrix" style="animation-delay:-2.97s;animation-duration:8.7s;opacity:0.04">ウ</text>
+    <text x="1073" y="265" class="matrix" style="animation-delay:-2.97s;animation-duration:8.7s;opacity:0.03">ケ</text>
+    <text x="1073" y="280" class="matrix" style="animation-delay:-2.97s;animation-duration:8.7s;opacity:0.02">0</text>
+    <text x="1073" y="295" class="matrix" style="animation-delay:-2.97s;animation-duration:8.7s;opacity:0.02">ノ</text>
+    <text x="1099" y="10" class="matrix" style="animation-delay:-4.51s;animation-duration:8.8s;opacity:0.16">ス</text>
+    <text x="1099" y="25" class="matrix" style="animation-delay:-4.51s;animation-duration:8.8s;opacity:0.12">チ</text>
+    <text x="1099" y="40" class="matrix" style="animation-delay:-4.51s;animation-duration:8.8s;opacity:0.11">ワ</text>
+    <text x="1099" y="55" class="matrix" style="animation-delay:-4.51s;animation-duration:8.8s;opacity:0.11">チ</text>
+    <text x="1099" y="70" class="matrix" style="animation-delay:-4.51s;animation-duration:8.8s;opacity:0.10">ロ</text>
+    <text x="1099" y="85" class="matrix" style="animation-delay:-4.51s;animation-duration:8.8s;opacity:0.09">フ</text>
+    <text x="1099" y="100" class="matrix" style="animation-delay:-4.51s;animation-duration:8.8s;opacity:0.09">ウ</text>
+    <text x="1099" y="115" class="matrix" style="animation-delay:-4.51s;animation-duration:8.8s;opacity:0.08">レ</text>
+    <text x="1099" y="130" class="matrix" style="animation-delay:-4.51s;animation-duration:8.8s;opacity:0.08">ス</text>
+    <text x="1099" y="145" class="matrix" style="animation-delay:-4.51s;animation-duration:8.8s;opacity:0.07">ソ</text>
+    <text x="1099" y="160" class="matrix" style="animation-delay:-4.51s;animation-duration:8.8s;opacity:0.07">ラ</text>
+    <text x="1099" y="175" class="matrix" style="animation-delay:-4.51s;animation-duration:8.8s;opacity:0.06">ヤ</text>
+    <text x="1099" y="190" class="matrix" style="animation-delay:-4.51s;animation-duration:8.8s;opacity:0.05">ル</text>
+    <text x="1099" y="205" class="matrix" style="animation-delay:-4.51s;animation-duration:8.8s;opacity:0.05">サ</text>
+    <text x="1099" y="220" class="matrix" style="animation-delay:-4.51s;animation-duration:8.8s;opacity:0.04">ハ</text>
+    <text x="1099" y="235" class="matrix" style="animation-delay:-4.51s;animation-duration:8.8s;opacity:0.04">カ</text>
+    <text x="1099" y="250" class="matrix" style="animation-delay:-4.51s;animation-duration:8.8s;opacity:0.03">ム</text>
+    <text x="1099" y="265" class="matrix" style="animation-delay:-4.51s;animation-duration:8.8s;opacity:0.03">ス</text>
+    <text x="1099" y="280" class="matrix" style="animation-delay:-4.51s;animation-duration:8.8s;opacity:0.02">リ</text>
+    <text x="1099" y="295" class="matrix" style="animation-delay:-4.51s;animation-duration:8.8s;opacity:0.02">ク</text>
+    <text x="1124" y="10" class="matrix" style="animation-delay:-9.08s;animation-duration:10.0s;opacity:0.12">ケ</text>
+    <text x="1124" y="25" class="matrix" style="animation-delay:-9.08s;animation-duration:10.0s;opacity:0.08">ツ</text>
+    <text x="1124" y="40" class="matrix" style="animation-delay:-9.08s;animation-duration:10.0s;opacity:0.08">ユ</text>
+    <text x="1124" y="55" class="matrix" style="animation-delay:-9.08s;animation-duration:10.0s;opacity:0.07">ン</text>
+    <text x="1124" y="70" class="matrix" style="animation-delay:-9.08s;animation-duration:10.0s;opacity:0.07">モ</text>
+    <text x="1124" y="85" class="matrix" style="animation-delay:-9.08s;animation-duration:10.0s;opacity:0.07">チ</text>
+    <text x="1124" y="100" class="matrix" style="animation-delay:-9.08s;animation-duration:10.0s;opacity:0.06">ヒ</text>
+    <text x="1124" y="115" class="matrix" style="animation-delay:-9.08s;animation-duration:10.0s;opacity:0.06">カ</text>
+    <text x="1124" y="130" class="matrix" style="animation-delay:-9.08s;animation-duration:10.0s;opacity:0.05">フ</text>
+    <text x="1124" y="145" class="matrix" style="animation-delay:-9.08s;animation-duration:10.0s;opacity:0.05">ロ</text>
+    <text x="1124" y="160" class="matrix" style="animation-delay:-9.08s;animation-duration:10.0s;opacity:0.05">ツ</text>
+    <text x="1124" y="175" class="matrix" style="animation-delay:-9.08s;animation-duration:10.0s;opacity:0.04">ロ</text>
+    <text x="1124" y="190" class="matrix" style="animation-delay:-9.08s;animation-duration:10.0s;opacity:0.04">ネ</text>
+    <text x="1124" y="205" class="matrix" style="animation-delay:-9.08s;animation-duration:10.0s;opacity:0.03">タ</text>
+    <text x="1124" y="220" class="matrix" style="animation-delay:-9.08s;animation-duration:10.0s;opacity:0.03">マ</text>
+    <text x="1124" y="235" class="matrix" style="animation-delay:-9.08s;animation-duration:10.0s;opacity:0.03">ム</text>
+    <text x="1124" y="250" class="matrix" style="animation-delay:-9.08s;animation-duration:10.0s;opacity:0.02">ホ</text>
+    <text x="1124" y="265" class="matrix" style="animation-delay:-9.08s;animation-duration:10.0s;opacity:0.02">ヒ</text>
+    <text x="1124" y="280" class="matrix" style="animation-delay:-9.08s;animation-duration:10.0s;opacity:0.01">エ</text>
+    <text x="1124" y="295" class="matrix" style="animation-delay:-9.08s;animation-duration:10.0s;opacity:0.01">ユ</text>
+    <text x="1150" y="10" class="matrix" style="animation-delay:-0.40s;animation-duration:7.9s;opacity:0.17">ソ</text>
+    <text x="1150" y="25" class="matrix" style="animation-delay:-0.40s;animation-duration:7.9s;opacity:0.12">1</text>
+    <text x="1150" y="40" class="matrix" style="animation-delay:-0.40s;animation-duration:7.9s;opacity:0.12">エ</text>
+    <text x="1150" y="55" class="matrix" style="animation-delay:-0.40s;animation-duration:7.9s;opacity:0.11">ス</text>
+    <text x="1150" y="70" class="matrix" style="animation-delay:-0.40s;animation-duration:7.9s;opacity:0.10">レ</text>
+    <text x="1150" y="85" class="matrix" style="animation-delay:-0.40s;animation-duration:7.9s;opacity:0.10">モ</text>
+    <text x="1150" y="100" class="matrix" style="animation-delay:-0.40s;animation-duration:7.9s;opacity:0.09">ヤ</text>
+    <text x="1150" y="115" class="matrix" style="animation-delay:-0.40s;animation-duration:7.9s;opacity:0.09">1</text>
+    <text x="1150" y="130" class="matrix" style="animation-delay:-0.40s;animation-duration:7.9s;opacity:0.08">レ</text>
+    <text x="1150" y="145" class="matrix" style="animation-delay:-0.40s;animation-duration:7.9s;opacity:0.07">タ</text>
+    <text x="1150" y="160" class="matrix" style="animation-delay:-0.40s;animation-duration:7.9s;opacity:0.07">モ</text>
+    <text x="1150" y="175" class="matrix" style="animation-delay:-0.40s;animation-duration:7.9s;opacity:0.06">ア</text>
+    <text x="1150" y="190" class="matrix" style="animation-delay:-0.40s;animation-duration:7.9s;opacity:0.06">コ</text>
+    <text x="1150" y="205" class="matrix" style="animation-delay:-0.40s;animation-duration:7.9s;opacity:0.05">ヘ</text>
+    <text x="1150" y="220" class="matrix" style="animation-delay:-0.40s;animation-duration:7.9s;opacity:0.04">ミ</text>
+    <text x="1150" y="235" class="matrix" style="animation-delay:-0.40s;animation-duration:7.9s;opacity:0.04">リ</text>
+    <text x="1150" y="250" class="matrix" style="animation-delay:-0.40s;animation-duration:7.9s;opacity:0.03">ヒ</text>
+    <text x="1150" y="265" class="matrix" style="animation-delay:-0.40s;animation-duration:7.9s;opacity:0.03">タ</text>
+    <text x="1150" y="280" class="matrix" style="animation-delay:-0.40s;animation-duration:7.9s;opacity:0.02">コ</text>
+    <text x="1150" y="295" class="matrix" style="animation-delay:-0.40s;animation-duration:7.9s;opacity:0.02">ヤ</text>
+</g>
+
+<rect x="28" y="20" width="1144" height="360" rx="16" fill="url(#termGlass)" stroke="#163516" stroke-width="1"/>
+<rect class="term-border" x="28" y="20" width="1144" height="360" rx="16"/>
+
+<rect x="28" y="20" width="1144" height="38" rx="16" fill="#0b1a0b" opacity="0.96"/>
+<rect x="28" y="46" width="1144" height="12" fill="#0b1a0b" opacity="0.96"/>
+<circle cx="54" cy="39" r="6.5" fill="#ff5f56"/>
+<circle cx="76" cy="39" r="6.5" fill="#ffbd2e"/>
+<circle cx="98" cy="39" r="6.5" fill="#27c93f"/>
+<text x="122" y="43" class="title">Aaron@github: ~</text>
+<line x1="44" y1="66" x2="1156" y2="66" stroke="#2aff2a" stroke-opacity="0.12"/>
+
+<g filter="url(#softGlow)">
+  <text x="70" y="108" class="cmd"><tspan class="type" style="animation-delay:0.80s">&gt;</tspan><tspan class="type" style="animation-delay:0.86s"> </tspan><tspan class="type" style="animation-delay:0.93s">w</tspan><tspan class="type" style="animation-delay:1.00s">h</tspan><tspan class="type" style="animation-delay:1.06s">o</tspan><tspan class="type" style="animation-delay:1.12s">a</tspan><tspan class="type" style="animation-delay:1.19s">m</tspan><tspan class="type" style="animation-delay:1.26s">i</tspan></text>
+  <text x="70" y="136" class="out" style="animation-delay:1.76s">Aaron Chu</text>
+  <text x="70" y="164" class="cmd"><tspan class="type" style="animation-delay:2.75s">&gt;</tspan><tspan class="type" style="animation-delay:2.82s"> </tspan><tspan class="type" style="animation-delay:2.88s">c</tspan><tspan class="type" style="animation-delay:2.95s">a</tspan><tspan class="type" style="animation-delay:3.01s">t</tspan><tspan class="type" style="animation-delay:3.08s"> </tspan><tspan class="type" style="animation-delay:3.15s">i</tspan><tspan class="type" style="animation-delay:3.21s">n</tspan><tspan class="type" style="animation-delay:3.27s">t</tspan><tspan class="type" style="animation-delay:3.34s">e</tspan><tspan class="type" style="animation-delay:3.40s">r</tspan><tspan class="type" style="animation-delay:3.47s">e</tspan><tspan class="type" style="animation-delay:3.54s">s</tspan><tspan class="type" style="animation-delay:3.60s">t</tspan><tspan class="type" style="animation-delay:3.67s">s</tspan><tspan class="type" style="animation-delay:3.73s">.</tspan><tspan class="type" style="animation-delay:3.79s">t</tspan><tspan class="type" style="animation-delay:3.86s">x</tspan><tspan class="type" style="animation-delay:3.92s">t</tspan></text>
+  <text x="70" y="192" class="out" style="animation-delay:4.49s">Software Engineering</text>
+  <text x="70" y="216" class="out" style="animation-delay:4.94s">Embedded Systems</text>
+  <text x="70" y="240" class="out" style="animation-delay:5.39s">Machine Learning  |  AI Systems</text>
+  <text x="70" y="268" class="cmd"><tspan class="type" style="animation-delay:6.29s">&gt;</tspan><tspan class="type" style="animation-delay:6.36s"> </tspan><tspan class="type" style="animation-delay:6.42s">g</tspan><tspan class="type" style="animation-delay:6.49s">i</tspan><tspan class="type" style="animation-delay:6.55s">t</tspan><tspan class="type" style="animation-delay:6.62s"> </tspan><tspan class="type" style="animation-delay:6.68s">s</tspan><tspan class="type" style="animation-delay:6.75s">t</tspan><tspan class="type" style="animation-delay:6.81s">a</tspan><tspan class="type" style="animation-delay:6.88s">t</tspan><tspan class="type" style="animation-delay:6.94s">u</tspan><tspan class="type" style="animation-delay:7.01s">s</tspan></text>
+  <text x="70" y="296" class="git" style="animation-delay:7.44s">On branch main — Your career is ahead of origin by 42 commits.</text>
+  <text x="70" y="324" class="cmd"><tspan class="type" style="animation-delay:8.64s">&gt;</tspan><tspan class="type" style="animation-delay:8.71s"> </tspan><tspan class="type" style="animation-delay:8.77s">s</tspan><tspan class="type" style="animation-delay:8.84s">u</tspan><tspan class="type" style="animation-delay:8.90s">d</tspan><tspan class="type" style="animation-delay:8.96s">o</tspan><tspan class="type" style="animation-delay:9.03s"> </tspan><tspan class="type" style="animation-delay:9.10s">m</tspan><tspan class="type" style="animation-delay:9.16s">a</tspan><tspan class="type" style="animation-delay:9.23s">k</tspan><tspan class="type" style="animation-delay:9.29s">e</tspan><tspan class="type" style="animation-delay:9.36s"> </tspan><tspan class="type" style="animation-delay:9.42s">c</tspan><tspan class="type" style="animation-delay:9.49s">a</tspan><tspan class="type" style="animation-delay:9.55s">r</tspan><tspan class="type" style="animation-delay:9.62s">e</tspan><tspan class="type" style="animation-delay:9.68s">e</tspan><tspan class="type" style="animation-delay:9.75s">r</tspan></text>
+  <text x="70" y="352" class="sudo" style="animation-delay:10.18s">Building future... done.</text>
+  <text x="70" y="380" class="cmd"><tspan class="cursor">█</tspan></text>
+</g>
+
+<rect x="28" y="20" width="1144" height="360" rx="16" fill="url(#scanPat)" opacity="0.5" pointer-events="none"/>
+<rect x="28" y="20" width="1144" height="360" rx="16" fill="url(#crtVignette)" pointer-events="none"/>
+<rect x="28" y="20" width="1144" height="360" rx="16" fill="none" stroke="#000000" stroke-width="6" stroke-opacity="0.2"/>
+
+</svg>
