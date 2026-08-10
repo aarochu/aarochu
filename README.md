@@ -1,6 +1,6 @@
-<!-- Terminal Header (animated SVG — regenerate with scripts/generate_header.py) -->
+<!-- ASCII portrait header (animated SVG — regenerate with scripts/generate_ascii_header.py) -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/aarochu/aarochu/main/assets/header.svg" width="100%" alt="Aaron Chu — hacker terminal header"/>
+  <img src="https://raw.githubusercontent.com/aarochu/aarochu/main/assets/header.svg" width="100%" alt="Aaron Chu — ASCII portrait"/>
 </p>
 
 <p align="center">
