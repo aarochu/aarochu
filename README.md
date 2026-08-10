@@ -43,18 +43,21 @@
 <p align="center">
 <img src="https://skillicons.dev/icons?i=python,java,c,cpp,js,ts,bash" />
 </p>
+<p align="center">Python, Java, C, C++, JavaScript, TypeScript, Bash</p>
 
 ## Embedded Systems
 
 <p align="center">
 <img src="https://skillicons.dev/icons?i=arduino,linux,c,cpp,bash" />
 </p>
+<p align="center">Arduino, Linux, C, C++, Bash</p>
 
 ## Web Development
 
 <p align="center">
 <img src="https://skillicons.dev/icons?i=react,nextjs,nodejs,tailwind,html,css" />
 </p>
+<p align="center">React, Next.js, Node.js, Tailwind CSS, HTML, CSS</p>
 
 ## AI / Machine Learning
 
@@ -65,18 +68,21 @@
 <p align="center">
 <img src="https://go-skill-icons.vercel.app/api/icons?i=scikitlearn,pandas" />
 </p>
+<p align="center">PyTorch, TensorFlow, scikit-learn, Pandas</p>
 
 ## Cloud & Databases
 
 <p align="center">
 <img src="https://skillicons.dev/icons?i=aws,docker,mongodb,postgres,redis,firebase" />
 </p>
+<p align="center">AWS, Docker, MongoDB, PostgreSQL, Redis, Firebase</p>
 
 ## Tools
 
 <p align="center">
 <img src="https://skillicons.dev/icons?i=git,github,vscode" />
 </p>
+<p align="center">Git, GitHub, VS Code</p>
 
 ---
 
