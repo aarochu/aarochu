@@ -1,9 +1,12 @@
-<!-- ASCII portrait header (animated SVG — regenerate with scripts/generate_ascii_header.py) -->
+<!-- animejs header (regenerate with scripts/generate_hi_gif.js) -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/aarochu/aarochu/main/assets/header.svg" width="100%" alt="Aaron Chu — ASCII portrait"/>
+  <img src="https://raw.githubusercontent.com/aarochu/aarochu/main/assets/hi-aaron.gif" alt="Hello, I'm Aaron :)"/>
 </p>
 
 <p align="center">
+  <a href="https://x.com/aarochu_ai">
+    <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white"/>
+  </a>
   <a href="https://linkedin.com/in/achu02">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
   </a>
@@ -103,6 +106,10 @@
 # 📫 Connect With Me
 
 <p align="center">
+<a href="https://x.com/aarochu_ai">
+<img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/brands/square-x-twitter.svg" width="48"/>
+</a>
+
 <a href="https://linkedin.com/in/achu02">
 <img src="https://skillicons.dev/icons?i=linkedin" width="48"/>
 </a>

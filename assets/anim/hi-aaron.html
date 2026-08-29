@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 1200px;
+    height: 300px;
+    background: #0a0a0a;
+    overflow: hidden;
+  }
+  #stage {
+    width: 1200px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'SF Mono', Consolas, monospace;
+  }
+  #text {
+    display: flex;
+    font-size: 64px;
+    font-weight: 600;
+    color: #e8e8e8;
+    letter-spacing: 1px;
+    white-space: pre;
+  }
+  .ch {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  #cursor {
+    display: inline-block;
+    width: 8px;
+    margin-left: 10px;
+    background: #e8e8e8;
+    opacity: 0;
+  }
+</style>
+</head>
+<body>
+  <div id="stage">
+    <div id="text">
+      <span id="cursor">&nbsp;</span>
+    </div>
+  </div>
+
+  <script src="../../node_modules/animejs/dist/bundles/anime.umd.js"></script>
+  <script>
+    const MESSAGE = "Hello, I'm Aaron :)";
+    const textEl = document.getElementById('text');
+    const cursorEl = document.getElementById('cursor');
+
+    // build one span per character, cursor stays as the last element
+    [...MESSAGE].forEach((raw) => {
+      const span = document.createElement('span');
+      span.className = 'ch';
+      span.textContent = raw === ' ' ? ' ' : raw;
+      textEl.insertBefore(span, cursorEl);
+    });
+
+    const letters = document.querySelectorAll('.ch');
+
+    const LETTER_DUR = 480;
+    const STAGGER = 55;
+    const HOLD = 1500;
+    const FADE_OUT = 650;
+    const PAUSE = 500;
+
+    const revealEnd = (letters.length - 1) * STAGGER + LETTER_DUR;
+    const holdEnd = revealEnd + HOLD;
+    const fadeOutEnd = holdEnd + FADE_OUT;
+    const totalDuration = fadeOutEnd + PAUSE;
+
+    const reveal = anime.animate('.ch', {
+      opacity: [0, 1],
+      translateY: [24, 0],
+      duration: LETTER_DUR,
+      delay: anime.stagger(STAGGER),
+      easing: 'easeOutExpo',
+      autoplay: false,
+    });
+
+    const cursorBlink = anime.animate(cursorEl, {
+      opacity: [0, 1, 1, 0],
+      duration: 500,
+      loop: true,
+      easing: 'steps(2)',
+      autoplay: false,
+    });
+
+    const fadeOut = anime.animate('#text', {
+      opacity: [1, 0],
+      duration: FADE_OUT,
+      easing: 'easeInQuad',
+      autoplay: false,
+    });
+
+    window.__totalDuration = totalDuration;
+
+    window.__seek = function (t) {
+      reveal.seek(Math.min(t, revealEnd));
+      if (t >= revealEnd) {
+        cursorEl.style.opacity = '1';
+        cursorBlink.seek(Math.max(0, t - revealEnd) % 1000);
+      } else {
+        cursorEl.style.opacity = '0';
+      }
+      if (t >= holdEnd) {
+        fadeOut.seek(Math.min(t - holdEnd, FADE_OUT));
+      } else {
+        document.getElementById('text').style.opacity = '1';
+      }
+    };
+  </script>
+</body>
+</html>
