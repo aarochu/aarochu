@@ -16,9 +16,6 @@
   <img src="https://komarev.com/ghpvc/?username=aarochu&style=for-the-badge&color=2563EB"/>
 </p>
 
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=aarochu&theme=algolia&no-frame=true&no-bg=true&row=1&margin-w=10"/>
-</p>
 
 ---
 
@@ -86,38 +83,6 @@
 <img src="https://skillicons.dev/icons?i=git,github,vscode" />
 </p>
 <p align="center">Git, GitHub, VS Code</p>
-
----
-
-# 📈 GitHub Stats
-
-<p align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=aarochu&show_icons=true&theme=github_dark&hide_border=true&rank_icon=github"/>
-
-  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aarochu&layout=compact&theme=github_dark&hide_border=true"/>
-</p>
-
-<p align="center">
-  <img width="70%" src="https://github-readme-streak-stats.herokuapp.com/?user=aarochu&theme=github-dark&hide_border=true"/>
-</p>
-
----
-
-# 📫 Connect With Me
-
-<p align="center">
-<a href="https://x.com/aarochu_ai">
-<img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/brands/square-x-twitter.svg" width="48"/>
-</a>
-
-<a href="https://linkedin.com/in/achu02">
-<img src="https://skillicons.dev/icons?i=linkedin" width="48"/>
-</a>
-
-<a href="mailto:aaronchu022@gmail.com">
-<img src="https://skillicons.dev/icons?i=gmail" width="48"/>
-</a>
-</p>
 
 ---
 
